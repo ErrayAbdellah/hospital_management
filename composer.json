@@ -2,6 +2,7 @@
     "name": "youcode/simple_php_structure",
     "description": "a simple structure to organize your php code",
     "type": "simpleprojectstructure",
+    "version": "0.0.1",
     "require": {
         "ramsey/uuid": "^4.6"
     },
