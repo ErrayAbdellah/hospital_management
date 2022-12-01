@@ -1,0 +1,15 @@
+{
+    "name": "youcode/simple_php_structure",
+    "description": "a simple structure to organize your php code",
+    "type": "simpleprojectstructure",
+    "require": {
+        "ramsey/uuid": "^4.6"
+    },
+    "authors": [
+        {
+            "name": "nadir inab",
+            "email": "nadir.inab.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
