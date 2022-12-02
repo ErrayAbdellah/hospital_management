@@ -1,5 +1,4 @@
 
-# simple_php_structure
 
 # Simple PHP Structure 
 
