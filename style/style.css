@@ -10,10 +10,16 @@ main{
     background-size: 100%;
 }
 #hero{
-    /* border: 2px solid tomato;  */
-    height: 88.7vh;
+    height: 91vh;
 }
-
+#bg_img_dashboard_dctr{
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-image: url(../img/b8.jpg);
+    height: 23rem;
+    background-size: cover;
+    background-position: center;
+}
 #appointementBtn{
     background-color:aquamarine;
 }
