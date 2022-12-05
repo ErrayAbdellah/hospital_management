@@ -11,4 +11,4 @@
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
         return $data ;
     } 
-    // throwData($data[0]) ;
+    throwData($data[0]) ;

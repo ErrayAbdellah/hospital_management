@@ -11,13 +11,14 @@
       </ul>
     </div>
   </nav>
-
-  <div id="hero"  class="text-white text-center">
-    <h2>Éviter les problèmes et les retards.</h2>
-    <p class="text-muted">Comment est la santé aujourd'hui, on dirait qu'elle n'est pas bonne !
-      Ne vous inquiétez pas. Trouvez votre médecin en ligne Réservez comme vous le souhaitez avec Youcode Doc.
-      Nous vous offrons un service gratuit de canalisation de médecin, prenez votre rendez-vous </p>
-    <button type="button" class="btn btn-primary m-2">Make Appointment</button>
-    <!-- <a href="" class=" text-white  ">YOUCODE DOC.</a> -->
+  <div class="text-white text-center">
+    <div id="hero">
+      <h2>Éviter les problèmes et les retards.</h2>
+      <p class="text-muted">Comment est la santé aujourd'hui, on dirait qu'elle n'est pas bonne !
+        Ne vous inquiétez pas. Trouvez votre médecin en ligne Réservez comme vous le souhaitez avec Youcode Doc.
+        Nous vous offrons un service gratuit de canalisation de médecin, prenez votre rendez-vous </p>
+      <button type="button" class="btn btn-primary m-2">Make Appointment</button>
+      <a href="" class=" text-white  ">YOUCODE DOC.</a>
+    </div>
   </div>
 </main>
