@@ -5,7 +5,11 @@
     box-sizing: border-box;
 }
 main{
-    background-image: url("img/bg01.jpg");
+    background-image: url("../img/bg01.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+}
+#hero{
+    border: 2px solid tomato; 
+    height: 91vh;
 }
