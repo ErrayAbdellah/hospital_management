@@ -10,6 +10,10 @@ main{
     background-size: 100%;
 }
 #hero{
-    border: 2px solid tomato; 
-    height: 91vh;
+    /* border: 2px solid tomato;  */
+    height: 88.7vh;
+}
+
+#appointementBtn{
+    background-color:aquamarine;
 }
