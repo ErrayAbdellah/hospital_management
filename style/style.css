@@ -10,22 +10,16 @@ main{
     background-size: 100%;
 }
 #hero{
-    border: 2px solid tomato; 
     height: 91vh;
 }
-
-#iddd{
-    margin-right: 7rem;
-    margin-left: 7rem;
-    background-image: url(../../images/imageTest/book3.png);
+#bg_img_dashboard_dctr{
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-image: url(../img/b8.jpg);
     height: 23rem;
     background-size: cover;
     background-position: center;
-    width: auto;
-    /* border: 2px solid tomato;  */
-    height: 88.7vh;
 }
-
 #appointementBtn{
     background-color:aquamarine;
 }
