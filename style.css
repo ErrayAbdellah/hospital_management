@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    background-image: url("img/bg01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+
+}
