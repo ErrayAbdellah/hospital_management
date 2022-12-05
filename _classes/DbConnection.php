@@ -6,7 +6,7 @@
         public $host = "localhost" ;
         public $user = "root" ;
         public $dbName = "hospitalmanagement" ;
-        public $pwd = "rainoverme" ;
+        public $pwd = "" ;
 
         public function connection() {
             try{
