@@ -1,14 +1,14 @@
 <?php  
         require "./templates/header.php" ;
         require "./includes/functions.php" ;
+        require "./services/userCrud.php" ;
         if(isset($_POST["signUp"])){
                 
         }
-
         if(isset($_POST["signIn"])){
-                throwData($_POST) ;
+                CreateUser() ;
         }
-        require "./services/test.php" ;
+        
         require "./templates/SignIn.php" ;
 ?>    
 
