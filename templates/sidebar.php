@@ -1,7 +1,7 @@
 <section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end" style="width: 280px;">
     <div>
         <div class="d-flex justify-content-center align-items-center gap-4">
-            <img src="../img/user.png" width="75" class="rounded-circle text-center">
+            <img src="./img/icons/doctors.svg" width="75" class="rounded-circle text-center">
             <p class="mb-0"><b>Administrator</b><br><span class="text-muted">admin@youcode.ma</span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
