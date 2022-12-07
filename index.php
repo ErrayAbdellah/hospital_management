@@ -1,27 +1,24 @@
-<?php  
-        require "./templates/header.php" ;
-        require "./includes/autoloader.php" ;
-        
-        require "./includes/functions.php" ;
-        require "./services/userCrud.php" ;
-        if(isset($_POST["signUp"])){
-                echo "hi" ;
-        }
-        if(isset($_POST["signIn"])){
-                CreateUser() ;
-        }
-        
-        require "./templates/sidebar.php" ;
-        $oussama = new Admin ;
-        echo "<hr>" ;
-        echo "here" ;
-        throwData($oussama) ;
+<?php
+require "./templates/header.php";
+require "./includes/autoloader.php";
+require "./includes/functions.php";
+require "./services/patientServices.php";
+// =================
+
+$signInStatus = null ;
+$signUpStatus = null ;
+
+// ====================
+if (isset($_POST["signUp"])) {
+       $signInStatus = createUser() ;
+}
+echo $signInStatus ;
+require "./templates/SignUp.php";
+
 ?>    
 
 
 
-
-
-<?php  require "./templates/footer.php" ; ?>
+<?php require "./templates/footer.php"; ?>
 
 
