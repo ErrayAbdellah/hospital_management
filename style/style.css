@@ -38,7 +38,7 @@ div#WelcomePage{
 #signInForm:hover, #signUpForm:hover{
     transform: translateY(8px) scale(1.001) translateZ(-0.7);
     opacity: 1.2;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(31, 131, 142, 0.68);
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
     border-radius: 10px;
