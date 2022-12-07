@@ -26,7 +26,6 @@ main.wlcm{
 #appointementBtn{
     background-color:aquamarine;
 }
-
 #crd_dctr_dashbrd{
     border-color: rgb(0, 193, 193);
 }
@@ -55,5 +54,4 @@ main.wlcm{
     transform: scale(0.75, 1) ;
     width: 20%;
     animation-delay: 3s;
-
 }
