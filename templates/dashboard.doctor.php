@@ -13,7 +13,6 @@
 </head>
 <body>
 <section class="col-9 ">
-
     <nav class="nav d-flex justify-content-between">
         <h4 class="d-flex align-items-center">Doctor</h4>
         <div class="d-flex ">

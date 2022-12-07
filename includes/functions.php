@@ -21,3 +21,10 @@ function pwdIsMatched($pwd1,$pwd2){
     }
 }
 
+
+function isUnregistered(){
+    if($_SESSION["user"] === null){
+        header("location: http://localhost/hospital_management/") ;
+    }
+}
+
