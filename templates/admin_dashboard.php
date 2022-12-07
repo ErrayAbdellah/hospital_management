@@ -1,7 +1,7 @@
 <?php require "header.php" ; ?>
 <?php require "sidebar.php" ; ?>
 
-<div class="container col-9 pt-3">
+<div class="col-8 pt-3">
     <div class="d-flex justify-content-between">
         <div class="w-50 d-flex gap-2 ">
             <input type="search" placeholder="Search doctor name or email" class="form-control position-relative">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div>
-        <h2>Upcoming Appointments until Next Tuesday</h2>
+        <h4 class="" style="color: #34AEAD">Upcoming Appointments until Next Tuesday</h4>
         <p>Here's Quick access to Upcoming Appointments until 7 days More details Available in @Appointment section</p>
     </div>
 </div>
