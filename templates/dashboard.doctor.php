@@ -16,7 +16,7 @@
 <body>
     <section class="container col-9 ">
         <nav class="nav d-flex justify-content-between">
-            <h4 class="d-flex align-items-center">Doctor</h4>
+            <h4 class="d-flex align-items-center">Hi Doctor</h4>
             <div class="d-flex ">
                 <div>
                     <span class="text-secondary" style="font-size:12px;">Today's Date </span>
