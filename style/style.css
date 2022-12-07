@@ -1,9 +1,10 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x:hidden;
 }
+
 div#WelcomePage{
     background-image: url("../img/bg01.jpg");
     background-repeat: no-repeat;
