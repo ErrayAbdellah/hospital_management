@@ -1,4 +1,5 @@
-<section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end" style="width: 280px;">
+<div class="row ">
+<section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end col-3" style="width: 280px;">
     <div>
         <div class="d-flex justify-content-center align-items-center gap-4">
             <img src="../img/user.png" width="75" class="rounded-circle text-center">

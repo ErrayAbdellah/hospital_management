@@ -1,4 +1,4 @@
-<main class="h-100">
+<main class="wlcm h-100">
   <nav class="navbar">
     <div class="container-fluid">
       <ul class="d-flex list-unstyled">

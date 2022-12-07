@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-main{
+main.wlcm{
     background-image: url("../img/bg01.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,13 +13,17 @@ main{
     height: 91vh;
 }
 #bg_img_dashboard_dctr{
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url(../img/b8.jpg);
-    height: 23rem;
+    height: 20rem;
     background-size: cover;
     background-position: center;
+    padding-right: 1rem;
 }
 #appointementBtn{
     background-color:aquamarine;
+}
+#crd_dctr_dashbrd{
+    border-color: rgb(0, 193, 193);
 }
