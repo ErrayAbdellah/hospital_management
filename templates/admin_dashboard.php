@@ -1,7 +1,7 @@
 <?php require "header.php" ; ?>
 <?php require "sidebar.php" ; ?>
 
-<div class="col-8 pt-3">
+<div class="container col-8 pt-3">
     <div class="d-flex justify-content-between">
         <div class="w-50 d-flex gap-2 ">
             <input type="search" placeholder="Search doctor name or email" class="form-control position-relative">
@@ -41,9 +41,55 @@
             </div>
         </div>
     </div>
-    <div>
-        <h4 class="" style="color: #34AEAD">Upcoming Appointments until Next Tuesday</h4>
-        <p>Here's Quick access to Upcoming Appointments until 7 days More details Available in @Appointment section</p>
+    <div class="d-flex gap-4">
+        <div class="w-50 py-4">
+            <h4 class="pb-3 fw-semibold" style="color: #34AEAD">Upcoming Appointments until Next Tuesday</h4>
+            <p>Here's Quick access to Upcoming Appointments until 7 days More details Available in @Appointment section</p>
+            <div class="border rounded">
+                <table class="table" style="display: block; height: 180px; overflow: auto;">
+                    <thead class="position-sticky top-0 bg-white" style="border-bottom: 3px solid #34AEAD;">
+                        <tr>
+                        <th scope="col" class="fw-semibold">Appointment number</th>
+                        <th scope="col" class="fw-semibold">Patient name</th>
+                        <th scope="col" class="fw-semibold">Doctor</th>
+                        <th scope="col" class="fw-semibold">Session</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn text-white w-100" style="background: #34AEAD;">Show all appointments</button>
+            </div>
+        </div>
+        <div class="w-50 py-4">
+            <h4 class="pb-3 fw-semibold" style="color: #34AEAD">Upcoming Sessions until Next Tuesday</h4>
+            <p>Here's Quick access to Upcoming Session that Schedule until 7 days add, Remove and Many features Available in @Schedule section</p>
+            <div class="border rounded">
+                <table class="table" style="display: block; height: 180px; overflow: auto;">
+                    <thead class="position-sticky top-0 bg-white" style="border-bottom: 3px solid #34AEAD;">
+                        <tr>
+                        <th scope="col" class="fw-semibold">Session Title</th>
+                        <th scope="col" class="fw-semibold">Doctor</th>
+                        <th scope="col" class="fw-semibold">Schedule Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn text-white w-100" style="background: #34AEAD;">Show all appointments</button>
+            </div>
+        </div>
     </div>
 </div>
 
