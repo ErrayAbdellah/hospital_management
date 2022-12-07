@@ -1,7 +1,6 @@
 <?php require 'sidebar.php';
       require 'header.php';
 
-
 ?>
 
 <section class="container col-9 ">
