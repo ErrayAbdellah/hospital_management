@@ -1,4 +1,4 @@
-<main class="wlcm h-100">
+<div id="WelcomePage" class="wlcm h-100">
   <nav class="navbar">
     <div class="container-fluid">
       <ul class="d-flex list-unstyled">
@@ -21,4 +21,4 @@
     </div>
   </div>
   <a href="" class="text-white d-flex justify-content-center">YOUCODE DOC.</a>
-</main>
+</div>

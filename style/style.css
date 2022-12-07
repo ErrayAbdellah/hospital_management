@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-main.wlcm{
+div#WelcomePage{
     background-image: url("../img/bg01.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
