@@ -12,6 +12,7 @@ main.wlcm{
 #hero{
     height: 91vh;
 }
+
 #bg_img_dashboard_dctr{
     margin-right: auto;
     margin-left: auto;
@@ -24,6 +25,34 @@ main.wlcm{
 #appointementBtn{
     background-color:aquamarine;
 }
+
 #crd_dctr_dashbrd{
     border-color: rgb(0, 193, 193);
+
+#signInForm, #signUpForm{
+    background: rgba( 255, 255, 255, 0.1 );
+    border: 2px solid rgba(21, 26, 64, 0.368);
+    border-radius: 20px;
+}
+#signInForm:hover, #signUpForm:hover{
+    transform: translateY(8px) scale(1.001) translateZ(-0.7);
+    opacity: 1.2;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition-duration: 0.8s;
+}
+.btn.sign{
+    background-color:rgb(5, 189, 127);
+}
+.btn.sign:hover{
+    font-size: large;
+    background-color: cadetblue;
+    transition: 3s ease-out;
+    transform: scale(0.75, 1) ;
+    width: 20%;
+    animation-delay: 3s;
+
 }
