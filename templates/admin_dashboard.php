@@ -8,7 +8,8 @@
             <button type="submit" class="btn text-white" style="background: #34AEAD;">Search</button>
         </div>
         <div class="d-flex gap-2">
-            <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;">2022-12-01</b></span>
+            <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;"><?php echo date('Y-m-d'); ?>
+        </b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <img src="../img/icons/calendar.svg" alt="calender">
             </div>
