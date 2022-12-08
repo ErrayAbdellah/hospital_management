@@ -58,6 +58,8 @@ div#WelcomePage{
     animation-delay: 3s;
 }
 
+
+
 #signInForm{
     /* visibility: hidden; */
     display: none;
@@ -70,3 +72,4 @@ div#WelcomePage{
 #displaySignUp{
     cursor: pointer;
 }
+
