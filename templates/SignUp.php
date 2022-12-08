@@ -40,7 +40,7 @@
         <small class="form-text text-muted"></small>
     </div>
     <div class="p-2 mt-3 mx-5 ">
-        <button name="signUp" class="btn sign fw-bold text-white">Sign Up</button>
+        <button id="submitData" name="signUp" class="btn sign fw-bold text-white">Sign Up</button>
         <span class="text-muted border border-2"> already Have an account <b  id="isSignedIn" class="muted">Sign In</b> </span>
     </div>
     </form>
