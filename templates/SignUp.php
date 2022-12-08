@@ -1,8 +1,8 @@
 
-<div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto ">
+<div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto mt-2 ">
     
     <h2 class="text-center fw-bold">Let's get Started !</h2>
-    <!-- <span class="text-muted mx-auto d-block w-100">Login with your details to continue !</span> -->
+    <!-- <span class="text-muted mx-auto d-block w-100">Login with your details to continue !</span>  -->
     <form action="" method="POST">
     <div class="form-group mx-5">
         <label for="name" class="text-dark fw-bold p-2  text-large">Full Name :</label>
@@ -40,8 +40,8 @@
         <small class="form-text text-muted"></small>
     </div>
     <div class="p-2 mt-3 mx-5 ">
-        <button name="signUp" class="btn sign fw-bold text-white">Sign Up</button>
-        <span class="text-muted"> already Have an account<a href="">   Sign In </a>  </span>
+        <button id="submitData" name="signUp" class="btn sign fw-bold text-white">Sign Up</button>
+        <span class="text-muted border border-2"> already Have an account <b  id="isSignedIn" class="muted">Sign In</b> </span>
     </div>
     </form>
 </div>
