@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow-x:hidden; */
+    overflow-x:hidden !important;
 }
 
 div#WelcomePage{
@@ -46,11 +46,11 @@ div#WelcomePage{
     transition-duration: 0.8s;
 }
 .btn.sign{
-    background-color:rgb(5, 189, 127);
+    background-color:rgba(5, 189, 128, 0.575);
 }
 .btn.sign:hover{
     font-size: large;
-    background-color: cadetblue;
+    background-color: rgb(21, 160, 100);
     transition: 3s ease-out;
     transform: scale(0.75, 1) ;
     width: 20%;
