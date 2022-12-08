@@ -19,7 +19,7 @@
     <div class="form-group mx-5">
         <i class="fa-solid fa-envelope"></i>
         <label for="email"  class="text-dark fw-bold p-1 ">Email :</label>
-        <input name="email" type="email" class="form-control w-75"  placeholder="Enter Email">
+        <input name="email" type="text" class="form-control w-75"  placeholder="Enter Email">
         <small class="form-text text-danger px-2 fw-bold"></small> <i class="fa-sharp fa-solid fa-face-angry "></i>
     </div>
     <div class="form-group mx-5">
