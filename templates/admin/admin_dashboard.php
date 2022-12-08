@@ -1,4 +1,4 @@
-<?php require "header.php" ; ?>
+<?php require "../header.php" ; ?>
 <?php require "admin_sidebar.php" ; ?>
 
 <div class="container col-8 pt-3">
@@ -94,4 +94,4 @@
     </div>
 </div>
 
-<?php require "footer.php" ; ?>
+<?php require "../footer.php" ; ?>
