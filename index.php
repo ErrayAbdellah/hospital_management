@@ -4,7 +4,6 @@
        require "./includes/functions.php";
        require "./services/patientServices.php";
 // =================
-
 $signInStatus = null ;
 $signUpStatus = null ;
 

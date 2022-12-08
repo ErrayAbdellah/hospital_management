@@ -70,3 +70,7 @@ div#WelcomePage{
 #displaySignUp{
     cursor: pointer;
 }
+.fa-sharp{
+    color: red;
+    visibility: hidden;
+}
