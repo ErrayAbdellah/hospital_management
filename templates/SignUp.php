@@ -1,5 +1,6 @@
-
-<div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto mt-1">
+<?php require "header.php" ; ?>
+<div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto mt-2 ">
+    
     <h2 class="text-center fw-bold">Let's get Started !</h2>
     <!-- <span class="text-muted mx-auto d-block w-100">Login with your details to continue !</span>  -->
     <form action="" method="POST">
@@ -45,9 +46,10 @@
         <input name="cPwd" type="password" class="form-control w-75"  placeholder="confimed Password">
         <small class="form-text text-danger fw-bold px-2"></small>
     </div>
-    <div class="p-2 mx-5 ">
-        <button id="submitData" name="signUp" class="btn sign fw-bold text-white">Sign Up</button>
-        <span class="text-muted border border-2"> already Have an account <b  id="isSignedIn" class="text-primary">Sign In</b> </span>
+    <div class="p-2 mt-3 mx-5 ">
+        <button id="submitData" name="signUp" class="btn sign fw-bold text-white d-block w-100" style="background: #34AEAD">Sign Up</button>
+        <span class="text-muted border border-2"> already Have an account <b  id="isSignedIn" class="muted">Sign In</b> </span>
     </div>
     </form>
 </div>
+<?php require "footer.php" ; ?>
