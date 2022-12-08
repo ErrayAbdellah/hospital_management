@@ -1,19 +1,6 @@
-<?php require 'doctor_sidebar.php' ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Hospital Management</title>
-</head>
-
-<body>
+ <?php require 'doctor_sidebar.php';
+    //   require 'header.php' ;
+?>
     <section class="col-9">
         <nav class="nav d-flex justify-content-between">
             <h4 class="d-flex align-items-center">Hi Doctor</h4>
@@ -33,9 +20,9 @@
                     Thanks for joinnig with us. We are always trying to get you a complete service
                     You can view your dailly schedule, Reach Patients Appointment at home!
                 </p>
-                <button type="button" class="btn text-light w-50" style="background-color:#34AEAD;">
+                <a href="doctor_appointments.php"  class="btn text-light w-50" style="background-color:#34AEAD;">
                     View My Appointmants
-                </button>
+                </a>
             </div>
         </div>
 
@@ -78,9 +65,7 @@
                                 <i class="fa fa-book" style="font-size:30px; "></i>
                             </div>
                         </div>
-                    </div>
-
-                    
+                    </div>  
                     <div  class="position-absolute bottom-0 end-0 py-5 mb-5" style="height: 3rem; width:15rem; ">
                         <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded border">
                             <div>
@@ -115,5 +100,6 @@
         </main>
     </div>
     </section>
-    
+
+ 
     <?php require 'footer.php' ?>

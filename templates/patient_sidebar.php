@@ -11,23 +11,23 @@
         <hr>
     </div>
     <div>
-        <a href="#" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
+        <a href="dashboard.patient.php" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
             <img src="../img/icons/dashboard.svg" alt=" dashboard">
             <p class="mb-0">Home</p>
         </a>
-        <a href="#" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
+        <a href="patient.alldoctor.php" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
             <img src="../img/icons/doctors.svg" alt=" doctors">
             <p class="mb-0">All Doctors</p>
         </a>
-        <a href="#" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
+        <a href="patient.scheduledsessions.php" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
             <img src="../img/icons/session.svg" alt=" schedule">
             <p class="mb-0">Scheduled Sessions</p>
         </a>
-        <a href="#" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
+        <a href="patient.bookings.php" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
             <img src="../img/icons/book.svg" alt=" book">
             <p class="mb-0">My booking</p>
         </a>
-        <a href="#" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
+        <a href="patient.settings.php" class="text-decoration-none d-flex gap-4 ms-5 py-2" style="color: #34AEAD;">
             <img src="../img/icons/settings.svg" alt=" doctors">
             <p class="mb-0">Settings</p>
         </a>
