@@ -70,6 +70,13 @@ div#WelcomePage{
 	width: 10px;
 }
 
+#displaySignUp{
+    cursor: pointer;
+}
+.fa-sharp{
+    color: red;
+    visibility: hidden;
+}
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
