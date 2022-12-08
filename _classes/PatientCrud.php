@@ -8,3 +8,9 @@
             $stmt->execute([":fullName" => $data["fullName"], ":adresse" => $data["adresse"], ":email" => $data["email"] , ":CIN" => $data["CIN"], ":birthDate" => $data["birthDate"], ":pwd" => $data["pwd"]]);
         }
     }
+
+    /*
+        positional params ?  execute ["email"] ;indexed array 
+
+        named params :id  execute aray associative ["email" => $_POST[]]
+    */

@@ -14,9 +14,9 @@ $signUpStatus = null ;
 
 
 
-
 // require "./templates/SignUp.php";
-// require "./templates/SignIn.php";
+require "./templates/SignIn.php";
+
 
 ?>    
 

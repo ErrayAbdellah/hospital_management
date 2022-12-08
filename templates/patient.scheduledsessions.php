@@ -27,7 +27,7 @@ require 'header.php';
     </div>
     <div class="p-3">
         <h5 class="m-4">All Sessions(1)</h5>
-        <div class="card w-100 shadow p-3 mb-5 bg-body rounded" >
+        <div class="card w-100 shadow  mb-5 bg-body rounded" >
   <div class="card-body">
     <h4 class="card-title" style="color: #34AEAD;">Test Session</h4>
     <h6 class="card-subtitle mb-2 text-muted">Test Doctor</h6>
