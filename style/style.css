@@ -84,9 +84,9 @@ div#WelcomePage{
 	background-image: -webkit-gradient(linear,
 									   40% 0%,
 									   75% 84%,
-									   from(#4D9C41),
-									   to(#19911D),
-									   color-stop(.6,#54DE5D))
+									   from(#70BDC2),
+									   to(#34AEAD),
+									   color-stop(.6,#92CFD4))
 }
 
 /* end scroll */
