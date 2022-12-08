@@ -13,8 +13,8 @@ $signUpStatus = null ;
 // }
 echo $signInStatus ;
 
-require "./templates/SignUp.php";
-// require "./templates/SignIn.php";
+// require "./templates/SignUp.php";
+require "./templates/SignIn.php";
 
 ?>    
 
