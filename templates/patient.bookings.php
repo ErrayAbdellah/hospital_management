@@ -28,8 +28,8 @@
   
   <div class="card shadow p-3 w-50 mb-5 bg-body rounded m-2" >
   <div class="card-body">
-    <h5 class="card-title" >Booking Date: 2022-10-31</h5>
-    <h5 class="card-title" >Reference Number: OC-000-2</h5>
+    <h6 class="card-title" >Booking Date: 2022-10-31</h6>
+    <h6 class="card-title" >Reference Number: OC-000-2</h6>
     <h4 class="card-title" style="color: #34AEAD;">Test Session</h4>
     <h5 class="card-title" >Appointment Number:</h5>
     <h3 class="card-title" >01</h3>
@@ -43,8 +43,8 @@
 
 <div class="card shadow p-3 w-50 mb-5 bg-body rounded m-2" >
   <div class="card-body">
-    <h5 class="card-title" >Booking Date: 2022-10-31</h5>
-    <h5 class="card-title" >Reference Number: OC-000-2</h5>
+    <h6 class="card-title" >Booking Date: 2022-10-31</h6>
+    <h6 class="card-title" >Reference Number: OC-000-2</h6>
     <h4 class="card-title" style="color: #34AEAD;">Test Session</h4>
     <h5 class="card-title" >Appointment Number:</h5>
     <h3 class="card-title" >02</h3>
