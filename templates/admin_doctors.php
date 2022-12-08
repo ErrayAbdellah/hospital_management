@@ -1,5 +1,5 @@
 
-<?php require 'sidebar.php';
+<?php require 'admin_sidebar.php';
       require 'header.php';
 ?>
 
