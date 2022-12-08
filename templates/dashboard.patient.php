@@ -6,7 +6,7 @@ require 'header.php';
 <section class="container col-9 ">
     <div class="d-flex justify-content-between py-3 ">
         <div class="d-flex  ">
-            <h3>Home</h3>
+            <h3 >Home</h3>
         </div>
         <div class="d-flex gap-2">
             <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;">2022-12-01</b></span>
