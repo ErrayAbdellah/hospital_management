@@ -1,5 +1,5 @@
 <?php require 'doctor_sidebar.php';
-      require 'header.php';
+      require '../header.php';
 ?>
 
 <section class="container col-9 ">
@@ -60,4 +60,4 @@
 
 
 
-<?php require 'footer.php' ?>
+<?php require '../footer.php' ?>
