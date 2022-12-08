@@ -30,7 +30,6 @@ div#WelcomePage{
 #crd_dctr_dashbrd{
     border-color: rgb(0, 193, 193);
 }
-
 #signInForm, #signUpForm{
     background: rgba( 255, 255, 255, 0.1 );
     border: 2px solid rgba(21, 26, 64, 0.368);
@@ -57,14 +56,18 @@ div#WelcomePage{
     width: 20%;
     animation-delay: 3s;
 }
+/* start scroll */
 
-#signInForm{
-    /* visibility: hidden; */
-    display: none;
+::-webkit-scrollbar-track
+{
+    
+	background-color: transparent;
+	border-radius: 10px;
 }
 
-#isSignedIn{
-    cursor: pointer;
+::-webkit-scrollbar
+{
+	width: 10px;
 }
 
 #displaySignUp{
@@ -74,3 +77,16 @@ div#WelcomePage{
     color: red;
     visibility: hidden;
 }
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
+
+/* end scroll */
