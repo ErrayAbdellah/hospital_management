@@ -1,4 +1,4 @@
-<?php require 'sidebar.php';
+<?php require 'patient_sidebar.php';
       require 'header.php';
 
 
