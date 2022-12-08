@@ -18,20 +18,13 @@ var icon = document.getElementsByClassName("fa-sharp");
 
 // password validation ;
 function isMatched(pwd1, pwd2) {
-    // if (pwd1 == pwd2) {
-    //     return true;
-    // } else {
-    //     return false;
-    // }
     return ((pwd1 == pwd2)) ? true : false ;
 }
 
 // email validation 
 function isValid(email) {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (email.value.match(mailformat)) {
-        return true;
-    }
+    return (email.value.match(mailformat)) ? true : false ;
 }
 
 // inputs validation .
@@ -43,7 +36,10 @@ function showEroor(input, message) {
     icon.style.visibility = "visible";
 }
 
+
 signUp.addEventListener("submit", (e) => {
+    e.preventDefault() ;
+    console.log(isValid(email)) ;
 
     if (fullName.value == "") {
         e.preventDefault();
@@ -76,9 +72,6 @@ signUp.addEventListener("submit", (e) => {
         showEroor(birthDate, "Please enter your birthdate !!");
     }
 })
-
-
-
 
 // ========================================>
 
