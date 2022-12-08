@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section class="col-9 ">
+    <section class="col-9">
         <nav class="nav d-flex justify-content-between">
             <h4 class="d-flex align-items-center">Hi Doctor</h4>
             <div class="d-flex ">
@@ -92,7 +92,6 @@
                             </div>
                         </div>
                     </div>
-                
             </div>
             
         </main> 
@@ -103,6 +102,7 @@
             background-size:15em;
             background-position: bottom;">
                     <table class="table border-secondary text-center table-hover">
+                        
                         <tr class="">
                             <td class=" fw-bold ">Session Title</td>
                             <td class=" fw-bold">Doctor</td>

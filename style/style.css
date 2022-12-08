@@ -56,4 +56,30 @@ div#WelcomePage{
     width: 20%;
     animation-delay: 3s;
 }
+/* start scroll */
 
+::-webkit-scrollbar-track
+{
+    
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
+
+/* end scroll */
