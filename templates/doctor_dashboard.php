@@ -1,5 +1,7 @@
-<?php require 'doctor_sidebar.php' ?>
-<!DOCTYPE html>
+<?php require 'doctor_sidebar.php';
+      require 'header.php' ;
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +15,7 @@
     <title>Hospital Management</title>
 </head>
 
-<body>
+<body> -->
     <section class="col-9">
         <nav class="nav d-flex justify-content-between">
             <h4 class="d-flex align-items-center">Hi Doctor</h4>
@@ -78,9 +80,7 @@
                                 <i class="fa fa-book" style="font-size:30px; "></i>
                             </div>
                         </div>
-                    </div>
-
-                    
+                    </div>  
                     <div  class="position-absolute bottom-0 end-0 py-5 mb-5" style="height: 3rem; width:15rem; ">
                         <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded border">
                             <div>

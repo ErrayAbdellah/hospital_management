@@ -12,9 +12,11 @@ $signUpStatus = null ;
 // if (isset($_POST["signUp"])) {
 //        $signInStatus = createUser() ;
 // }
-echo $signInStatus ;
 
-require "./templates/SignUp.php";
+
+
+
+// require "./templates/SignUp.php";
 // require "./templates/SignIn.php";
 
 ?>    
