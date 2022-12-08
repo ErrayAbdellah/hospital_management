@@ -1,5 +1,5 @@
 <?php require "header.php" ; ?>
-<?php require "sidebar.php" ; ?>
+<?php require "admin_sidebar.php" ; ?>
 
 <div class="container col-8 pt-3">
     <div class="d-flex justify-content-between">
