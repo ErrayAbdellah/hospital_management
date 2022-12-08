@@ -13,6 +13,6 @@
         <small class="form-text text-muted"></small>
     </div>
     <button name="signIn" class="btn sign text-white fw-bold w-50 p-2 mt-3 d-block mx-auto">Sign In</button>
-    <span class="text-muted p-2 ">Don't have an account ? <a href="">Sign Up </a> </span>
+    <span class="text-muted p-2 ">Don't have an account ? <b id="displaySignUp" class="text-primary"> Sign Up </b>  </span>
     </form>
 </div>
