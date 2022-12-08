@@ -1,4 +1,4 @@
-<?php require 'sidebar.php' ?>
+<?php require 'doctor_sidebar.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <section class="container col-9 ">
+    <section class="col-9 ">
         <nav class="nav d-flex justify-content-between">
-            <h4 class="d-flex align-items-center">Doctor</h4>
+            <h4 class="d-flex align-items-center">Hi Doctor</h4>
             <div class="d-flex ">
                 <div>
                     <span class="text-secondary" style="font-size:12px;">Today's Date </span>
@@ -39,72 +39,81 @@
             </div>
         </div>
 
-        <main class="_title">
-            <div>
+        <div class="d-flex">
+         <main class="w-50" class="">
                 <h3 class="fw-bold" style="color: #007A69;"><i class="uil uil-chart-bar fs-4 me-2"></i> Status</h3>
-                <div class="row g-3 d-flex justify-content-around">
-                    <div class="col-lg-3 col-md-5 col-11">
+                   <div class="position-relative h-75 py-5 m-3 pb-5 mb-5">
+
+                    <div class="position-absolute top-0 start-0" style="height: 3rem; width:15rem; "  >
                         <div class="p-3 shadow-sm d-flex justify-content-around align-items-center rounded border">
                             <div>
-                                <h3 class="fs-2 mycolor">3</h3>
-                                <p class="fs-5 text-black">Doctors</p>
+                                <h5 class="">3</h5>
+                                <p class="fs-6 text-black">Doctors</p>
                             </div>
-                            <i class="uil uil-medkit fs-3 mycolor box rounded py-2  px-3"></i>
+                            <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
+                                <i class="fa fa-medkit" style="font-size:30px; "></i>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-5 col-11">
+                    
+                    <div  class="position-absolute top-0 end-0" style="height: 3rem; width:15rem; ">
                         <div class="p-3 shadow-sm d-flex justify-content-around align-items-center rounded border">
                             <div>
-
-                                <h3 class="fs-2 mycolor">3</h3>
-                                <p class="fs-5 text-black">Patients</p>
+                                <h5 class="">3</h5>
+                                <p class="fs-6 text-black">Patients</p>
                             </div>
-                            <i class="uil uil-accessible-icon-alt fs-3 mycolor box rounded py-2  px-3 "></i>
+                            <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
+                                <i class="fa fa-wheelchair" style="font-size:30px; "></i>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-5 col-11">
+                    
+                    <div   class="position-absolute bottom-0 start-0 py-5 mb-5" style="height: 3rem; width:15rem; border-color: #34AEAD ;">
                         <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded  border">
                             <div>
-                                <h3 class="fs-2 mycolor">2</h3>
-                                <p class="fs-5 text-black">New Booking</p>
+                                <h5 class="">2</h5>
+                                <p class="fs-6 text-black">New Booking</p>
                             </div>
-                            <i class="uil uil-bookmark fs-3 mycolor rounded py-2  px-3 box"></i>
+                            <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
+                                <i class="fa fa-book" style="font-size:30px; "></i>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="col-lg-3 col-md-5 col-11">
+                    
+                    <div  class="position-absolute bottom-0 end-0 py-5 mb-5" style="height: 3rem; width:15rem; ">
                         <div class="p-3  shadow-sm d-flex justify-content-around align-items-center rounded border">
                             <div>
-                                <h3 class="fs-2 mycolor">2</h3>
-                                <p class="fs-5 text-black">Today sessions</p>
+                                <h5 class="">2</h5>  
+                                <p class="fs-6 text-black">Today sessions</p>
                             </div>
-                            <i class="uil uil-heart-rate fs-3 mycolor  rounded py-2  px-3 box"></i>
+                            <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
+                                <i class="fa fa-heartbeat" style="font-size:30px; "></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
-        </main>
-        <main>
-            <form method="post" style="width: 49%; height: 25em;" class="position-relative appointment-table rounded shadowborder">
-                <div class="card-body table-responsive position-relative" style="height: 15em; overflow: scroll; background-image:  url(../img/icons/notfound.svg);
+            
+        </main> 
+        <main class="w-50">
+            <form method="post" style="height: 25em;" class="position-relative appointment-table rounded shadowborder ">
+                <div class="card-body table-responsive position-relative" style="height: 25em; overflow: scroll; background-image:  url(../img/notfound.svg);
             background-repeat: no-repeat;
             background-size:15em;
             background-position: bottom;">
                     <table class="table border-secondary text-center table-hover">
                         <tr class="">
-                            <td class="mycolor fw-bold ">Session Title</td>
-                            <td class="mycolor fw-bold">Doctor</td>
-                            <td class="mycolor fw-bold">Scheduled Date & Time</td>
+                            <td class=" fw-bold ">Session Title</td>
+                            <td class=" fw-bold">Doctor</td>
+                            <td class=" fw-bold">Scheduled Date & Time</td>
                         </tr>
-
                     </table>
                 </div>
-                <button class="w-100 btn mycolor button1 position-absolute bottom-0" name="allSessions" type="submit">Show all Sessions</button>
+                <button class="w-100 btn bottom-0 text-light" name="" type="submit" style="background-color:#34AEAD;">Show all Sessions</button>
             </form>
         </main>
+    </div>
     </section>
-
+    
     <?php require 'footer.php' ?>
