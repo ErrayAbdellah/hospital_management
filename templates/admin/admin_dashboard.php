@@ -11,7 +11,7 @@
             <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;"><?php echo date('Y-m-d'); ?>
         </b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
-                <img src="../img/icons/calendar.svg" alt="calender">
+                <img src="../../img/icons/calendar.svg" alt="calender">
             </div>
         </div>
     </div>
@@ -20,25 +20,25 @@
         <div class="d-flex gap-2 col rounded p-2 justify-content-between" style="border: 1px solid #34AEAD;">
             <span> <b style="color: #34AEAD;">1</b><br><small class="text-muted">Doctors</small></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px; background: #D9D9D9;">
-                <img src="../img/icons/doctors.svg" alt="doctor">
+                <img src="../../img/icons/doctors.svg" alt="doctor">
             </div>
         </div>
         <div class="d-flex gap-2 col rounded p-2 justify-content-between" style="border: 1px solid #34AEAD;">
             <span> <b style="color: #34AEAD;">3</b><br><small class="text-muted">Patients</small></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px; background: #D9D9D9;">
-                <img src="../img/icons/patients.svg" alt="patients">
+                <img src="../../img/icons/patients.svg" alt="patients">
             </div>
         </div>
         <div class="d-flex gap-2 col rounded p-2 justify-content-between" style="border: 1px solid #34AEAD;">
             <span> <b style="color: #34AEAD;">0</b><br><small class="text-muted">newBooking</small></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px; background: #D9D9D9;">
-                <img src="../img/icons/book.svg" alt="book">
+                <img src="../../img/icons/book.svg" alt="book">
             </div>
         </div>
         <div class="d-flex gap-2 col rounded p-2 justify-content-between" style="border: 1px solid #34AEAD;">
             <span> <b style="color: #34AEAD;">0</b><br><small class="text-muted">Today sessions</small></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px; background: #D9D9D9;">
-                <img src="../img/icons/session.svg" alt="session">
+                <img src="../../img/icons/session.svg" alt="session">
             </div>
         </div>
     </div>
