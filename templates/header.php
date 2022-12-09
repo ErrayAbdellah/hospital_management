@@ -12,3 +12,4 @@
     <title>Hospital Management</title>
 </head>
 <body>
+    
