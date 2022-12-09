@@ -12,5 +12,4 @@
             $this->adresse = $adresse ;
             $this->birthDate = $birthDate ;
         }
-        
     }
