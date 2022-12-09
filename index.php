@@ -12,13 +12,11 @@ $signUpStatus = null ;
 //        $signInStatus = createUser() ;
 // }
 
-
-
 // require "./templates/SignUp.php";
-require "./templates/SignIn.php";
-
+require "./templates/SignIn.php" ;
 
 ?>    
+
 
 
 <script src="./app.js"></script>
