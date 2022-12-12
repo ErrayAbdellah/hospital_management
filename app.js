@@ -38,8 +38,8 @@ function showEroor(input, message) {
 
 
 signUp.addEventListener("submit", (e) => {
-    e.preventDefault() ;
-    console.log(isValid(email)) ;
+    // e.preventDefault() ;
+    // console.log(isValid(email)) ;
 
     if (fullName.value == "") {
         e.preventDefault();
