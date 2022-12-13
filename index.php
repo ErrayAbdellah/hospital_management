@@ -18,7 +18,6 @@ require "./templates/SignIn.php" ;
 ?>    
 
 
-
 <script src="./app.js"></script>
 <?php require "./templates/footer.php"; ?>
 
