@@ -21,3 +21,5 @@
 
         }
     }
+
+    $admin = new AdminCrud;
