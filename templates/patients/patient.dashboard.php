@@ -15,7 +15,7 @@ require '../header.php';
             </div>
         </div>
     </div>
-    <div style=" margin-right: auto;margin-left: auto;background-image: url(../img/b3.jpg);height: 20rem;background-size: cover;background-position: center; padding-right: 1rem;  ">
+    <div style=" margin-right: auto;margin-left: auto;background-image: url(../../img/b3.jpg);height: 20rem;background-size: cover;background-position: center; padding-right: 1rem;  ">
         <div class="ps-5 pt-5 w-sm-50 pb-1" id="imgPatient">
             <h5>Welcome !</h5>
             <h4 class="mt-3 fw-bold">hanane hanane.</h4>
