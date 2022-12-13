@@ -2,6 +2,8 @@
 <?php 
       require '../header.php';
       require 'admin_sidebar.php';
+      require '../../_classes/AdminCrud.php';
+      if(isset($_POST['addDoctor'])) $admin->addDoctor();
 ?>
 
 
@@ -96,7 +98,8 @@
 </table>
 </div>
 </section>
-<form action=""><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<form action="admin_doctors.php" method="POST" name="addDoctor"><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -104,31 +107,28 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Full name :</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="fullName">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Specialties :</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="specialties">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">E-mail :</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Password :</label>
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="password">
 
           </div>
           
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn" style="background: #34AEAD; color:azure">Save</button>
+        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure">Save</button>
       </div>
     </div>
   </div>
