@@ -68,19 +68,19 @@
       <div class="modal-body">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Full name :</label>
-            <input type="text" class="form-control" name="fullName">
+            <input type="text" class="form-control" name="fullName" id="doctorName" value="">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Specialties :</label>
-            <input type="text" class="form-control" name="specialties">
+            <input type="text" class="form-control" name="specialties" id="doctorSpeciality" value="">
           </div>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">E-mail :</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <label for="recipient-name" class="col-form-label">Email :</label>
+            <input type="email" class="form-control" aria-describedby="emailHelp" name="email" id="doctorEmail" value="">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Password :</label>
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="password">
+            <input type="password" class="form-control" aria-describedby="passwordHelpInline" name="password" id="doctorPassword" value="">
 
           </div>
           
@@ -94,6 +94,38 @@
 </div></form>
 
 
+<script>
+  function editDoctor(id){
+    send_data({id:id}, 'edit-doctor');
+}
 
+function send_data(obj, type){
+    var form = new FormData();
+    for(key in obj){form.append(key,obj[key]);}
+    form.append('data_type',type);
+
+    var ajax = new XMLHttpRequest();
+    ajax.addEventListener('readystatechange',function(){
+      if(ajax.readyState == 4){
+        if(ajax.status == 200){
+          handle_result(ajax.responseText);
+        }else{
+          alert("an error occurred");
+        }
+      }
+    });
+    ajax.open('POST','controller.php',true);
+    ajax.send(form);
+}
+
+function handle_result(result){
+    let object = JSON.parse(result);
+    document.getElementById('doctorName').value = object.data.name;
+    document.getElementById('doctorSpeciality').value = object.data.specialties;
+    document.getElementById('doctorEmail').value = object.data.email;
+    document.getElementById('doctorPassword').value = object.data.pwd;
+    
+}
+</script>
 
 <?php require '../footer.php' ?>
