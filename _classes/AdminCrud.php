@@ -7,18 +7,45 @@
             $stmt = $connect->prepare($query);
             $stmt->execute([":name" => $data["name"], ":email" => $data["email"], ":pwd" => $data["pwd"], ":specialties" => $data["specialties"]]) ;
         }
+
+        public function displayDoctor(){
+            $connection = new DbConnection();
+            $connect = $connection->connection();
+            $query = "select * from doctor";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($result as $row){
+                echo
+                '<tr>
+                    <th scope="row">'.$row["name"].'</th>
+                    <td>'.$row["email"].'</td>
+                    <td>'.$row["specialties"].'</td>
+                    <td>
+                    <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure"><i class="fas fa-pen"></i> Edit </button>
+                    <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure"><i class="fa fa-eye"></i> View </button>
+                    <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure"><i class="fa fa-trash"></i> Remove </button>
+                    </td>
+                </tr>';
+            }
+        }
+
         public function upDateDoctor(){
 
         }
+
         public function deleteDoctor(){
 
         }
+
         public function addSession(){
 
         }
+
         public function deleteSession(){
 
         }
+        
         public function displayPatientData(){
 
         }

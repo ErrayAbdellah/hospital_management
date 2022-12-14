@@ -50,52 +50,10 @@
     </tr>
   </thead>
   <tbody class="text-center">
-    <tr>
-      <th scope="row">Test Doctor</th>
-      <td>doctor@youcode.ma</td>
-      <td>Accident and emergen</td>
-      
-      <td><button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class='fas fa-pen'></i> Edit
-
-</button>
-<button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class="fa fa-eye"></i> View
-
-
-</button>
-<button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class="fa fa-trash"></i> Remove
-
-
-</button></td>
-    </tr>
-    <tr>
-      <th scope="row">Test Doctor</th>
-      <td>doctor@youcode.ma</td>
-      <td>Accident and emergen</td>
-      
-      <td><button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class='fas fa-pen'></i> Edit
-
-</button>
-<button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class="fa fa-eye"></i> View
-
-
-</button>
-<button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class="fa fa-trash"></i> Remove
-
-
-</button></td>
-    </tr>
+    <?php
+      $admin = new AdminCrud;
+      $admin->displayDoctor();
+    ?>
   </tbody>
 </table>
 </div>
