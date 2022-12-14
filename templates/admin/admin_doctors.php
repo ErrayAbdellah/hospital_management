@@ -2,8 +2,10 @@
 <?php 
       require '../header.php';
       require 'admin_sidebar.php';
+      require '../../_classes/DbConnection.php';
       require '../../_classes/AdminCrud.php';
-      if(isset($_POST['addDoctor'])) $admin->addDoctor();
+      require '../../services/AdminServices.php';
+      if(isset($_POST['addDoctor'])) createDoctor();
 ?>
 
 
@@ -99,7 +101,7 @@
 </div>
 </section>
 
-<form action="admin_doctors.php" method="POST" name="addDoctor"><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form action="admin_doctors.php" method="POST" ><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -128,7 +130,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure">Save</button>
+        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="addDoctor">Save</button>
       </div>
     </div>
   </div>
