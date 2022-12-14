@@ -6,6 +6,7 @@
       require '../../_classes/AdminCrud.php';
       require '../../services/AdminServices.php';
       if(isset($_POST['addDoctor'])) createDoctor();
+      if(isset($_POST['updateDoctor'])) $admin->updateDoctor();
 ?>
 
 
@@ -66,6 +67,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <input type="hidden" id="doctorId" name="doctorId" value="">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Full name :</label>
             <input type="text" class="form-control" name="fullName" id="doctorName" value="">
@@ -81,13 +83,13 @@
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Password :</label>
             <input type="password" class="form-control" aria-describedby="passwordHelpInline" name="password" id="doctorPassword" value="">
-
           </div>
           
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="addDoctor">Save</button>
+        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="updateDoctor">Update</button>
       </div>
     </div>
   </div>
@@ -97,34 +99,34 @@
 <script>
   function editDoctor(id){
     send_data({id:id}, 'edit-doctor');
-}
+  }
 
 function send_data(obj, type){
-    var form = new FormData();
-    for(key in obj){form.append(key,obj[key]);}
-    form.append('data_type',type);
+  var form = new FormData();
+  for(key in obj){form.append(key,obj[key]);}
+  form.append('data_type',type);
 
-    var ajax = new XMLHttpRequest();
-    ajax.addEventListener('readystatechange',function(){
-      if(ajax.readyState == 4){
-        if(ajax.status == 200){
-          handle_result(ajax.responseText);
-        }else{
-          alert("an error occurred");
-        }
+  var ajax = new XMLHttpRequest();
+  ajax.addEventListener('readystatechange',function(){
+    if(ajax.readyState == 4){
+      if(ajax.status == 200){
+        handle_result(ajax.responseText);
+      }else{
+        alert("an error occurred");
       }
-    });
-    ajax.open('POST','controller.php',true);
-    ajax.send(form);
+    }
+  });
+  ajax.open('POST','controller.php',true);
+  ajax.send(form);
 }
 
 function handle_result(result){
-    let object = JSON.parse(result);
-    document.getElementById('doctorName').value = object.data.name;
-    document.getElementById('doctorSpeciality').value = object.data.specialties;
-    document.getElementById('doctorEmail').value = object.data.email;
-    document.getElementById('doctorPassword').value = object.data.pwd;
-    
+  let object = JSON.parse(result);
+  document.getElementById('doctorId').value = object.data.id;
+  document.getElementById('doctorName').value = object.data.name;
+  document.getElementById('doctorSpeciality').value = object.data.specialties;
+  document.getElementById('doctorEmail').value = object.data.email;
+  document.getElementById('doctorPassword').value = object.data.pwd;
 }
 </script>
 

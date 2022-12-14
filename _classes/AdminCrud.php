@@ -54,8 +54,19 @@
             return $result[0];
         }
 
-        public function upDateDoctor(){
+        public function updateDoctor(){
+            $connection = new DbConnection();
+            $connect = $connection->connection();
 
+            $id = $_POST['doctorId'];
+            $name = $_POST['fullName'];
+            $specialty = $_POST['specialties'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $query = "update doctor set name = '$name', email = '$email', pwd = '$password', specialties = '$specialty' where id = '$id'";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
         }
 
         public function deleteDoctor(){
