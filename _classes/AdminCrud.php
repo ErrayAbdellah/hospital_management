@@ -30,6 +30,19 @@
             }
         }
 
+        public function counter($property){
+            $connection = new DbConnection();
+            $connect = $connection->connection();
+            switch($property){
+                case "doctors":
+                    $query = "select count(*) from doctor";
+                    $stmt = $connect->prepare($query);
+                    $stmt->execute();
+                    $number_of_rows = $stmt->fetchColumn();
+                    return $number_of_rows;
+            }
+        }
+
         public function upDateDoctor(){
 
         }
@@ -50,5 +63,4 @@
 
         }
     }
-
-    
+    $admin = new AdminCrud;

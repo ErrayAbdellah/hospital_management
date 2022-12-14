@@ -39,7 +39,7 @@
 </button>
 </div>
 <div class="p-3">
-<h5 class="">All Doctor (2)</h5>
+<h5 class="">All Doctor <?= $admin->counter("doctors") ?></h5>
 <table class="table p-3 " style="border-color: #34AEAD ;">
   <thead>
     <tr class="text-center">
@@ -51,7 +51,6 @@
   </thead>
   <tbody class="text-center">
     <?php
-      $admin = new AdminCrud;
       $admin->displayDoctor();
     ?>
   </tbody>
