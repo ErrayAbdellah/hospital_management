@@ -11,7 +11,7 @@
       <h3 class="px-3">Shedule Manager</h3>
     </div>
     <div class="d-flex gap-2">
-      <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;">2022-12-01</b></span>
+      <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;"><?php echo date('Y-m-d'); ?></b></span>
       <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
         <!-- <img src="../img/icons/calendar.svg" alt="calender"> -->
         <i class="fa fa-calendar" style="font-size:30px; "></i>
