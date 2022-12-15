@@ -27,7 +27,8 @@
         $stmt = $connect->prepare($query) ;
         $stmt->execute(["email" => $email, "pwd" => $pwd]) ;
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
-        throwData($result) ;
+        $_SESSION["email"] = $result[0]["email"] ;
+        $_SESSION["patient"] = $result[0]["fullName"] ;
         if($stmt->rowCount() != 0){
             header("location: ./templates/patients/patient.dashboard.php");
         }else{

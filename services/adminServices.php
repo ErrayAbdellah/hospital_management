@@ -18,3 +18,8 @@
             return "Doctor created successfully" ;
         }
     }
+    function signInAdmin(){
+        if($_POST["email"] == "admin@gmail.com" && $_POST["pwd"] == "admin"){
+            header("location: http://localhost/hospital_management/templates/admin/admin_dashboard.php") ;
+     }
+    }
