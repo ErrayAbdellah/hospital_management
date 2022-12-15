@@ -24,7 +24,7 @@
                     <td>
                     <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editDoctor('.$row["id"].')"><i class="fas fa-pen"></i> Edit </button>
                     <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure"><i class="fa fa-eye"></i> View </button>
-                    <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure" data-bs-toggle="modal" data-bs-target="#deleteDoctor"><i class="fa fa-trash" ></i> Remove </button>
+                    <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure" data-bs-toggle="modal" data-bs-target="#deleteDoctor" onclick="deleteDoctor('.$row["id"].')"><i class="fa fa-trash" ></i> Remove </button>
                     </td>
                 </tr>';
             }
@@ -66,8 +66,22 @@
             $stmt->execute();
         }
 
-        public function deleteDoctor(){
+        public function pre_deleteDoctor($id){
+            global $connect;
 
+            $query = "select * from doctor where id = $id";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result[0];
+        }
+
+        public function deleteDoctor(){
+            global $connect;
+            $id = $_POST["docId"];
+            $query = "delete from doctor where id = $id";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
         }
 
         public function addSession(){
