@@ -7,7 +7,7 @@
         global $connect;
         global $admin;
         $data = ["name" => $_POST["fullName"], "email" => $_POST["email"], "pwd" => $_POST["password"], "specialties" => $_POST["specialties"]];
-        $query = "select * from doctor where name = :name and email = :email";
+        $query = "select * from doctor where fullName = :name and email = :email";
         $stmt = $connect->prepare($query);
         $stmt->execute([":name" => $data["name"], ":email" => $data["email"]]);
         $stmt->fetchAll(PDO::FETCH_ASSOC) ;
