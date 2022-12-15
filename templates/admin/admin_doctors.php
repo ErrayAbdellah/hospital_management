@@ -157,15 +157,15 @@ function handle_result(result, type){
   let object = JSON.parse(result);
   switch(type){
     case "edit-doctor":
-      document.getElementById('doctorId').value = object.data.id;
-      document.getElementById('doctorName').value = object.data.name;
-      document.getElementById('doctorSpeciality').value = object.data.specialties;
+      document.getElementById('doctorId').value = object.data.id_doctor;
+      document.getElementById('doctorName').value = object.data.fullName;
+      document.getElementById('doctorSpeciality').value = object.data.speciality;
       document.getElementById('doctorEmail').value = object.data.email;
       document.getElementById('doctorPassword').value = object.data.pwd;
     break;
     case "delete-doctor":
-      document.getElementById('delete-docId').value = object.data.id;
-      document.getElementById('delete-doctorName').innerHTML = object.data.name;
+      document.getElementById('delete-docId').value = object.data.id_doctor;
+      document.getElementById('delete-doctorName').innerHTML = object.data.fullName;
     break;
   }
 }
