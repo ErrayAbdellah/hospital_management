@@ -1,6 +1,7 @@
 <?php  
 
     class User {
+        
         public $fullName ;
         public $email ;
         protected $pwd ;
@@ -14,6 +15,7 @@
         public function getFullName(){
             return $this->fullName ;
         }
+
         public function setFullName($fullName){
             $this->fullName = $fullName;
         }

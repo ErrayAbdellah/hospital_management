@@ -36,10 +36,7 @@ function showEroor(input, message) {
     icon.style.visibility = "visible";
 }
 
-
 signUp.addEventListener("submit", (e) => {
-    // e.preventDefault() ;
-    // console.log(isValid(email)) ;
 
     if (fullName.value == "") {
         e.preventDefault();
@@ -73,8 +70,8 @@ signUp.addEventListener("submit", (e) => {
     }
 })
 
-// ========================================>
 
+// ========================================>
 // isSignedIn.addEventListener("click", () => {
 //     console.log("click 1");
 //     // signIn.style.visibility = "visible" ;
@@ -85,6 +82,5 @@ signUp.addEventListener("submit", (e) => {
 //     console.log("click 2");
 //     // signUp.style.visibilty = "hidden" ;
 // })
-
 // ==============================================>
 

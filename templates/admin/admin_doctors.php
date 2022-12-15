@@ -52,7 +52,6 @@
       <th scope="row">Test Doctor</th>
       <td>doctor@youcode.ma</td>
       <td>Accident and emergen</td>
-      
       <td><button type="button" class="btn btn"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
         <i class='fas fa-pen'></i> Edit
@@ -122,9 +121,7 @@
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Password :</label>
             <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="password">
-
           </div>
-          
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

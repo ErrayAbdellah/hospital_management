@@ -14,5 +14,5 @@ function autoLoader($className){
     if(!file_exists($fullPath)){
         return false ;
     }
-     require $fullPath ;
+    require $fullPath ;
 }
