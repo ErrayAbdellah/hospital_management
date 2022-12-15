@@ -10,8 +10,8 @@
             loginPatient();
         }
         $data = ["email" =>$email,"password"=>$password];
-
-        DoctorCrud::signIn($data);
+        if()
+        USER::signIn($data);
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
         }
@@ -20,7 +20,7 @@
         }
     }
 ?>
-<div id="signInForm" class="container bg-muted text-dark w-50 p-5 d-block mx-auto ">
+<div id="signInForm" class="container bg-muted text-dark w-50 p-5 d-block mx-auto mt-5 ">
     <h2 class="text-center">Welcome Back !</h2>
     <!-- <span class="text-muted mx-auto d-block w-100">Login with your details to continue !</span> -->
     <form action="" method="POST">
@@ -40,8 +40,15 @@
         <?php endif ; ?> 
         <small class="form-text text-muted"></small>
     </div>
-    <button type="submit" name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
-    <span class="text-muted p-2 ">Don't have an account ? <b id="displaySignUp" class="text-primary"> Sign Up </b>  </span>
+    <div class="">
+    <label for="role"  class="text-dark fw-bold p-3">Role</label>
+        <select  class="form-select w-25" name="role" id="role">
+            <option value="patient">patient</option>
+            <option value="doctor">doctor</option>
+        </select>
+    </div>
+    <button name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
+    <span class="text-muted p-2 ">Don't have an account ? <a href="templates/SignUp.php"><b id="displaySignUp" class="text-primary"> Sign Up </b></a>  </span>
     </form>
 </div>
 <?php require "footer.php" ; ?>
