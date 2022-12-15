@@ -16,14 +16,10 @@
         public function getFullName(){
             return $this->fullName ;
         }
-<<<<<<< HEAD
 
         public function setFullName($fullName){
             $this->fullName = $fullName;
         }
-=======
-       
->>>>>>> a7375ad4819ddb8f4349f7f82946c93b55321243
         public function getEmail(){
             return $this->email ;
         }
