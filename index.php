@@ -1,6 +1,6 @@
 <?php
        require "./templates/header.php";
-       require "./includes/autoloader.php";
+       require "./includes/autoloader.php" ;
        require "./includes/functions.php";
        require "./services/patientServices.php";
 // =================

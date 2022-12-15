@@ -7,6 +7,9 @@
     if (isset($_POST['signIn'])) {
         $email = $_POST["email"];
         $password = $_POST["pwd"];
+        $data = ["email" =>$email,"password"=>$password];
+
+        DoctorCrud::signIn($data);
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
         }
