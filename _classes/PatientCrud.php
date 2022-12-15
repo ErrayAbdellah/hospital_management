@@ -13,7 +13,6 @@
         public function updateAccount(){
             $connection = new DbConnection();
             $connect = $connection->connection();
-
             $id = $_POST['id'];
             $fullName = $_POST['fullName'];
             $adresse = $_POST['adresse'];

@@ -8,11 +8,10 @@ $signInStatus = null ;
 $signUpStatus = null ;
 
 require "./templates/SignIn.php" ;
+?>    
 require "./templates/SignUp.php" ;
 
-
 ?>    
-
 
 <script src="./app.js"></script>
 <?php require "./templates/footer.php"; ?>
