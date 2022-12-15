@@ -1,5 +1,8 @@
-<?php require 'patient_sidebar.php';
+<?php
+ require 'patient_sidebar.php';
 require '../header.php';
+
+$date =  new DateTime("", new DateTimeZone("Africa/Casablanca")) ;
 ?>
 
 
@@ -9,7 +12,7 @@ require '../header.php';
             <h3 >Home</h3>
         </div>
         <div class="d-flex gap-2">
-            <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;">2022-12-01</b></span>
+            <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;"><?= $date->format("y/m/d") ;?></b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-calendar" style="font-size:30px; "></i>
             </div>
@@ -18,7 +21,7 @@ require '../header.php';
     <div style=" margin-right: auto;margin-left: auto;background-image: url(../../img/b3.jpg);height: 20rem;background-size: cover;background-position: center; padding-right: 1rem;  ">
         <div class="ps-5 pt-5 w-sm-50 pb-1" id="imgPatient">
             <h5>Welcome !</h5>
-            <h4 class="mt-3 fw-bold">abdellah.</h4>
+            <h4 class="mt-3 fw-bold"><?= $_SESSION["patient"] ?></h4>
             <p class=" mt-2 mb-3 text-muted">
                 Haven't any idea about doctors? no problem let's jumping to "All Doctors"
                 section or "Sessions" Track your past and future appointments history.
