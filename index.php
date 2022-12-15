@@ -7,13 +7,10 @@
 $signInStatus = null ;
 $signUpStatus = null ;
 
-// ====================
-// if (isset($_POST["signUp"])) {
-//        $signInStatus = createUser() ;
-// }
-
-// require "./templates/SignUp.php";
 require "./templates/SignIn.php" ;
+require "./templates/SignUp.php" ;
+
+
 ?>    
 
 
