@@ -5,8 +5,8 @@
     $connection = new DbConnection();
     $connect = $connection->connection();
 
-    $info  = [];
     if(count($_POST) > 0){
+        $info  = [];
         $info['data_type'] = $_POST['data_type'];
         if($info['data_type'] == 'edit-doctor'){
             $id = $_POST['id'];
@@ -15,7 +15,12 @@
             $data = $admin->editDoctor($id);
             
             $info['data'] = $data;
+        } else if($info['data_type'] == 'delete-doctor'){
+            $id = $_POST['id'];
+            $admin = new AdminCrud();
+            $data = $admin->pre_deleteDoctor($id);
+            $info['data'] = $data;
         }
+        echo json_encode($info);
     }
-    echo json_encode($info);
 ?>

@@ -7,6 +7,7 @@
       require '../../services/AdminServices.php';
       if(isset($_POST['addDoctor'])) createDoctor();
       if(isset($_POST['updateDoctor'])) $admin->updateDoctor();
+      if(isset($_POST['deleteDoc'])) $admin->deleteDoctor();
 ?>
 
 
@@ -59,46 +60,77 @@
 </div>
 </section>
 
-<form action="admin_doctors.php" method="POST" ><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Doctor</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <input type="hidden" id="doctorId" name="doctorId" value="">
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Full name :</label>
-            <input type="text" class="form-control" name="fullName" id="doctorName" value="">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Specialties :</label>
-            <input type="text" class="form-control" name="specialties" id="doctorSpeciality" value="">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Email :</label>
-            <input type="email" class="form-control" aria-describedby="emailHelp" name="email" id="doctorEmail" value="">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Password :</label>
-            <input type="password" class="form-control" aria-describedby="passwordHelpInline" name="password" id="doctorPassword" value="">
-          </div>
-          
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="addDoctor">Save</button>
-        <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="updateDoctor">Update</button>
+<!-- ------------ Add / Edit Modal ------------ -->
+<form action="admin_doctors.php" method="POST" >
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Doctor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="doctorId" name="doctorId" value="">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Full name :</label>
+              <input type="text" class="form-control" name="fullName" id="doctorName" value="">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Specialties :</label>
+              <input type="text" class="form-control" name="specialties" id="doctorSpeciality" value="">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Email :</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" name="email" id="doctorEmail" value="">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Password :</label>
+              <input type="password" class="form-control" aria-describedby="passwordHelpInline" name="password" id="doctorPassword" value="">
+            </div>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="addDoctor">Save</button>
+          <button type="submit" class="btn btn" style="background: #34AEAD; color:azure" name="updateDoctor">Update</button>
+        </div>
       </div>
     </div>
   </div>
-</div></form>
+</form>
 
+<!-- ------------ Delete Warning Modal ------------ -->
 
+<form action="" method="POST">
+  <div class="modal fade" id="deleteDoctor" tabindex="-1" aria-labelledby="deleteDoctorLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteDoctorLabel">Warning!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="delete-docId" name="docId" value="">
+          <p class="text-center">You are about to delete <span class="fw-bold">dr. <span id="delete-doctorName"></span></span></p>
+          <p class="text-center">Are you sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" name="deleteDoc" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- ------------ Js Script ------------ -->
 <script>
   function editDoctor(id){
     send_data({id:id}, 'edit-doctor');
+  }
+
+  function deleteDoctor(id){
+    send_data({id:id}, 'delete-doctor');
   }
 
 function send_data(obj, type){
@@ -110,7 +142,7 @@ function send_data(obj, type){
   ajax.addEventListener('readystatechange',function(){
     if(ajax.readyState == 4){
       if(ajax.status == 200){
-        handle_result(ajax.responseText);
+        handle_result(ajax.responseText, type);
       }else{
         alert("an error occurred");
       }
@@ -120,13 +152,21 @@ function send_data(obj, type){
   ajax.send(form);
 }
 
-function handle_result(result){
+function handle_result(result, type){
   let object = JSON.parse(result);
-  document.getElementById('doctorId').value = object.data.id;
-  document.getElementById('doctorName').value = object.data.name;
-  document.getElementById('doctorSpeciality').value = object.data.specialties;
-  document.getElementById('doctorEmail').value = object.data.email;
-  document.getElementById('doctorPassword').value = object.data.pwd;
+  switch(type){
+    case "edit-doctor":
+      document.getElementById('doctorId').value = object.data.id;
+      document.getElementById('doctorName').value = object.data.name;
+      document.getElementById('doctorSpeciality').value = object.data.specialties;
+      document.getElementById('doctorEmail').value = object.data.email;
+      document.getElementById('doctorPassword').value = object.data.pwd;
+    break;
+    case "delete-doctor":
+      document.getElementById('delete-docId').value = object.data.id;
+      document.getElementById('delete-doctorName').innerHTML = object.data.name;
+    break;
+  }
 }
 </script>
 
