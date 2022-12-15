@@ -1,5 +1,6 @@
 <?php
-
+    $connection = new DbConnection();
+    $connect = $connection->connection();
 
     class AdminCrud {
         public function addDoctor($data, $connect){
@@ -9,8 +10,7 @@
         }
 
         public function displayDoctor(){
-            $connection = new DbConnection();
-            $connect = $connection->connection();
+            global $connect;
             $query = "select * from doctor";
             $stmt = $connect->prepare($query);
             $stmt->execute();
@@ -31,8 +31,7 @@
         }
 
         public function counter($property){
-            $connection = new DbConnection();
-            $connect = $connection->connection();
+            global $connect;
             switch($property){
                 case "doctors":
                     $query = "select count(*) from doctor";
@@ -44,8 +43,7 @@
         }
 
         public function editDoctor($id){
-            $connection = new DbConnection();
-            $connect = $connection->connection();
+            global $connect;
 
             $query = "select * from doctor where id = $id";
             $stmt = $connect->prepare($query);
@@ -55,8 +53,7 @@
         }
 
         public function updateDoctor(){
-            $connection = new DbConnection();
-            $connect = $connection->connection();
+            global $connect;
 
             $id = $_POST['doctorId'];
             $name = $_POST['fullName'];
