@@ -9,7 +9,7 @@
         public static function signIn($data)
         {
             global $connect ;
-            $qry = "SELECT * FROM users where email like :email and psw like :pwd ";
+            $qry = "SELECT * FROM doctor where email like :email and pwd like :pwd ";
             $stmt = $connect->prepare($qry) ;
             $stmt->execute([":email"=>$data['email'],":pwd"=>$data['password']]);
             $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -18,7 +18,7 @@
                 header("location:templates/doctor/doctor_dashboard.php") ;
             }else 
             {
-                echo "error" ;
+                // echo "error" ;
             }
         }
     }

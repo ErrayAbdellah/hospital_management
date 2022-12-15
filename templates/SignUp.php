@@ -1,11 +1,7 @@
-<?php require "header.php" ;
-
-
-
-?>
+ 
 <div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto mt-2 ">
     
-    <h2 class="text-center fw-bold">Let's get Started !</h2>
+    <h2 class="text-center fw-bold"><i class="fa-solid fa-hospital-user"></i> Let's get Started !</h2>
     <!-- <span class="text-muted mx-auto d-block w-100">Login with your details to continue !</span>  -->
     <form action="" method="POST">
     <div class="form-group mx-5">
@@ -51,9 +47,8 @@
         <small class="form-text text-danger fw-bold px-2"></small>
     </div>
     <div class="p-2 mt-3 mx-5 ">
-        <button id="submitData" name="signUp" class="btn sign fw-bold text-white d-block w-100" style="background: #34AEAD">Sign Up</button>
-        <span class="text-muted border border-2"> already Have an account <b  id="isSignedIn" class="muted">Sign In</b> </span>
+        <button id="submitData" name="signUp" class="btn sign fw-bold text-white d-block w-50" style="background: #34AEAD">Sign Up</button>
+        <span class="text-muted p-2"> already Have an account <a href="http://localhost/hospital_management/" id="isSignedIn" class="muted">Sign In</a> </span>
     </div>
     </form>
 </div>
-<?php require "footer.php" ; ?>
