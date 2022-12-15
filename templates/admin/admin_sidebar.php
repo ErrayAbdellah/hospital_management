@@ -6,7 +6,7 @@
             <p class="mb-0"><b>Administrator</b><br><span class="text-muted">admin@youcode.ma</span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
-            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;">Log out</button>
+            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;"> <a href="http://localhost/hospital_management/templates/admin/admin_dashboard.php?&action=signOut">Log out</a></button>
         </div>
         <hr>
     </div>

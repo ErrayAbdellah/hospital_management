@@ -1,8 +1,7 @@
-<?php
-
+<?php   
+    // require "../../_classes/DbConnection.php" ;
     $connection = new DbConnection() ;
     $connect = $connection->connection() ;
-    // session_start() ;
 
     function createUser(){
         global $connect ;
@@ -34,4 +33,13 @@
         }else{
             return "email or password is incorrect" ;
         }
+    }
+
+    function displayData(){
+        global $connect ;
+        $query = "SELECT * FROM patients" ;
+        $stmt = $connect->prepare($query) ;
+        $stmt->execute() ;
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
+        return $result[0] ;
     }

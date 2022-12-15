@@ -1,8 +1,16 @@
-<?php require "../header.php" ;
-    require '../../_classes/DbConnection.php';
-    require '../../_classes/AdminCrud.php';
-    require '../../services/AdminServices.php';
-    require "admin_sidebar.php" ;
+<?php 
+    require "../header.php" ;
+    require '../../_classes/DbConnection.php' ;
+    require '../../_classes/AdminCrud.php' ;
+    require '../../services/AdminServices.php' ;
+    require "admin_sidebar.php" ; 
+
+    if(isset($_GET["action"]) && $_GET["action"] == "signOut") {
+        session_destroy() ;
+        header("location: http://localhost/hospital_management/") ;
+    }
+
+    
 ?>
 
 <div class="container col-8 pt-3">

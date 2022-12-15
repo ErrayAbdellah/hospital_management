@@ -40,13 +40,13 @@
         <small class="form-text text-muted"></small>
     </div>
 
-    <div class="">
+    <!-- <div class="">
     <label for="role"  class="text-dark fw-bold p-3">Role</label>
         <select  class="form-select w-25" name="role" id="role">
             <option value="patient">patient</option>
             <option value="doctor">doctor</option>
         </select>
-    </div>
+    </div> -->
     <button name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
     <span class="text-muted p-2 ">Don't have an account ? <a href="templates/SignUp.php"><b id="displaySignUp" class="text-primary"> Sign Up </b></a>  </span>
 

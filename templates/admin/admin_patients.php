@@ -1,6 +1,14 @@
 
 <?php require 'admin_sidebar.php';
       require '../header.php';
+      require "../../services/patientServices.php" ;
+
+
+      $data = displayData() ;
+      // echo "<pre>" ;
+      //   var_dump($data) ;
+      // echo "</pre>" ;
+      // echo $data[0]["email"] ;
 ?>
 
 
@@ -35,7 +43,7 @@
   <thead>
     <tr class="text-center">
       <th scope="col" >Name</th>
-      <th scope="col">NIC</th>
+      <th scope="col">CIN</th>
       <th scope="col">Telephone</th>
       <th scope="col">Email</th>
       <th scope="col">Date of Birth</th>
@@ -43,22 +51,21 @@
     </tr>
   </thead>
   <tbody class="text-center">
+    <?php foreach($data as $key => $value) : ?>
     <tr>
-      <th scope="row">hanane </th>
-      <td>1244</td>
-      <td>0712458769</td>
-      <td>emhashenudara@gmail.</td>
-      <td>2021-12-10</td>
-
+      <th scope="row"><?= $value ?> </th>
+      <td><?= $value ?> </td>
+      <td><?= "06-78-98-45-67" ?> </td>
+      <td><?= $value ?> ?></td>
+      <td><?= $value  ?></td>
 
       <td>
 <button type="button" class="btn btn"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
         <i class="fa fa-eye"></i> View
-
-
 </button>
-</td>
+    <?php endforeach ; ?>
+<!-- </td>
     </tr>
     <tr>
       <th scope="row">Issam </th>
@@ -93,7 +100,7 @@
 
 </button>
 </td>
-    </tr>
+    </tr> -->
     
   </tbody>
 </table>

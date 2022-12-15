@@ -18,7 +18,6 @@ if (isset($_POST["signIn"])) {
               loginPatient();
        }
        $data = ["email" => $email, "password" => $password];
-
        DoctorCrud::signIn($data);
        if (strlen($email) == 0) {
               $emailStatus = "please fill the email input";
@@ -27,9 +26,18 @@ if (isset($_POST["signIn"])) {
               $pwdStatus = "please fill the password input";
        }
 }
-require "./templates/SignIn.php";
-// require "./templates/SignUp.php";
+
+require "./templates/welcome.php" ;
 ?>
+
+
+<?php if(isset($_GET["action"]) && $_GET["action"] == "signIn") {
+       require "./templates/SignIn.php" ;
+} ?>
+<?php if(isset($_GET["action"]) && $_GET["action"] == "signUp") {
+       require "./templates/SignUp.php" ;
+} ?>
+
 
 <script src="./app.js"></script>
 <?php require "./templates/footer.php"; ?>
