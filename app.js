@@ -75,16 +75,16 @@ signUp.addEventListener("submit", (e) => {
 
 // ========================================>
 
-// isSignedIn.addEventListener("click", () => {
-//     console.log("click 1");
-//     // signIn.style.visibility = "visible" ;
-//     // signUp.style.visibility = "hidden" ;
-// })
+isSignedIn.addEventListener("click", () => {
+    //console.log("click 1");
+    signIn.style.visibility = "visible" ;
+    signUp.style.visibility = "hidden" ;
+})
 
-// displaySignUp.addEventListener("click", () => {
-//     console.log("click 2");
-//     // signUp.style.visibilty = "hidden" ;
-// })
+displaySignUp.addEventListener("click", () => {
+    //console.log("click 2");
+    signUp.style.visibilty = "hidden" ;
+})
 
 // ==============================================>
 
