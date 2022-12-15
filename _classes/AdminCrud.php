@@ -39,7 +39,25 @@
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
-                    return $number_of_rows;
+                return $number_of_rows;
+                case "patients":
+                    $query = "select count(*) from patients";
+                    $stmt = $connect->prepare($query);
+                    $stmt->execute();
+                    $number_of_rows = $stmt->fetchColumn();
+                return $number_of_rows;
+                case "appointement":
+                    $query = "select count(*) from appointement";
+                    $stmt = $connect->prepare($query);
+                    $stmt->execute();
+                    $number_of_rows = $stmt->fetchColumn();
+                return $number_of_rows;
+                case "session":
+                    $query = "select count(*) from session";
+                    $stmt = $connect->prepare($query);
+                    $stmt->execute();
+                    $number_of_rows = $stmt->fetchColumn();
+                return $number_of_rows;
             }
         }
 
