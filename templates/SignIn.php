@@ -1,5 +1,4 @@
 <?php
-    require "header.php" ;
 
     $emailStatus = null;
     $pwdStatus = null;
@@ -7,6 +6,9 @@
     if (isset($_POST['signIn'])) {
         $email = $_POST["email"];
         $password = $_POST["pwd"];
+        if(strlen($email) != 0 && strlen($password) != 0) {
+            loginPatient();
+        }
         $data = ["email" =>$email,"password"=>$password];
         if()
         USER::signIn($data);

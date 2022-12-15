@@ -1,4 +1,8 @@
-<?php require "header.php" ; ?>
+<?php require "header.php" ;
+
+
+
+?>
 <div id="signUpForm" class="container bg-muted text-dark w-50 p-1 d-block mx-auto mt-2 ">
     
     <h2 class="text-center fw-bold">Let's get Started !</h2>
