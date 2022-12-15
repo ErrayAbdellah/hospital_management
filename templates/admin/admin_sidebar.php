@@ -1,3 +1,9 @@
+<?php  
+    if(isset($_GET["action"]) && $_GET['action'] === 'signOut'){
+        session_destroy() ;
+        header("location: http://localhost/hospital_management/") ;
+    }
+?>
 <div class="row">
 <section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end col-3">
     <div>
@@ -6,7 +12,7 @@
             <p class="mb-0"><b></b><br><span class="text-muted">admin@youcode.ma</span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
-            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;">Log out</button>
+            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;"> <a href="<?=$_SERVER["PHP_SELF"]?>?&action=signOut"> Log out </a></button>
         </div>
         <hr>
     </div>
