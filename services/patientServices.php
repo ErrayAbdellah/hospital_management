@@ -2,6 +2,7 @@
 
     $connection = new DbConnection() ;
     $connect = $connection->connection() ;
+    // session_start() ;
 
     function createUser(){
         global $connect ;
@@ -22,11 +23,12 @@
         global $connect ;
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
-        $query = "SELECT * FROM patients WHERE email = '$email' and pwd = '$pwd'" ;
+        $query = "SELECT * FROM patients WHERE email = :email and pwd = :pwd" ;
         $stmt = $connect->prepare($query) ;
-        $stmt->execute() ;
-        $stmt->fetchAll(PDO::FETCH_ASSOC) ;
-    
+        $stmt->execute(["email" => $email, "pwd" => $pwd]) ;
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
+        $_SESSION["email"] = $result[0]["email"] ;
+        $_SESSION["patient"] = $result[0]["fullName"] ;
         if($stmt->rowCount() != 0){
             header("location: ./templates/patients/patient.dashboard.php");
         }else{

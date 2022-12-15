@@ -1,9 +1,10 @@
+<?php session_start() ; ?>
 <div class="row">
 <section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end col-3">
     <div>
         <div class="d-flex justify-content-center align-items-center gap-4">
             <img src="../../img/user.png" width="75" class="rounded-circle text-center">
-            <p class="mb-0"><b>Abdellah</b><br><span class="text-muted">abdellah@youcode.ma</span></p>
+            <p class="mb-0"><b><?= $_SESSION["patient"] ?></b><br><span class="text-muted"><?= $_SESSION["email"] ?></span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
             <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;">Log out</button>
