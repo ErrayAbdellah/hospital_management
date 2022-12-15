@@ -2,6 +2,7 @@
 
 
     class AdminCrud {
+
         public function addDoctor($data, $connect){
             $query = "insert into doctor(name, email, pwd, specialties) values(:name, :email, :pwd, :specialties)";
             $stmt = $connect->prepare($query);
@@ -9,8 +10,8 @@
         }
 
         public function displayDoctor(){
-            $connection = new DbConnection();
-            $connect = $connection->connection();
+            $connection = new DbConnection() ;
+            $connect = $connection->connection() ;
             $query = "select * from doctor";
             $stmt = $connect->prepare($query);
             $stmt->execute();
@@ -55,7 +56,7 @@
         }
 
         public function updateDoctor(){
-            $connection = new DbConnection();
+            $connection = new DbConnection(); 
             $connect = $connection->connection();
 
             $id = $_POST['doctorId'];
