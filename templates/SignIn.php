@@ -1,5 +1,4 @@
 <?php
-    require "header.php" ;
 
     $emailStatus = null;
     $pwdStatus = null;
@@ -7,6 +6,12 @@
     if (isset($_POST['signIn'])) {
         $email = $_POST["email"];
         $password = $_POST["pwd"];
+        if(strlen($email) != 0 && strlen($password) != 0) {
+            loginPatient();
+        }
+        $data = ["email" =>$email,"password"=>$password];
+
+        DoctorCrud::signIn($data);
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
         }
@@ -35,7 +40,7 @@
         <?php endif ; ?> 
         <small class="form-text text-muted"></small>
     </div>
-    <button name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
+    <button type="submit" name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
     <span class="text-muted p-2 ">Don't have an account ? <b id="displaySignUp" class="text-primary"> Sign Up </b>  </span>
     </form>
 </div>

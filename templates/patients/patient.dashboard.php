@@ -18,7 +18,7 @@ require '../header.php';
     <div style=" margin-right: auto;margin-left: auto;background-image: url(../../img/b3.jpg);height: 20rem;background-size: cover;background-position: center; padding-right: 1rem;  ">
         <div class="ps-5 pt-5 w-sm-50 pb-1" id="imgPatient">
             <h5>Welcome !</h5>
-            <h4 class="mt-3 fw-bold">hanane hanane.</h4>
+            <h4 class="mt-3 fw-bold">abdellah.</h4>
             <p class=" mt-2 mb-3 text-muted">
                 Haven't any idea about doctors? no problem let's jumping to "All Doctors"
                 section or "Sessions" Track your past and future appointments history.
