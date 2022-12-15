@@ -16,14 +16,10 @@
         public function getFullName(){
             return $this->fullName ;
         }
-<<<<<<< HEAD
 
         public function setFullName($fullName){
             $this->fullName = $fullName;
         }
-=======
-       
->>>>>>> a7375ad4819ddb8f4349f7f82946c93b55321243
         public function getEmail(){
             return $this->email ;
         }
@@ -34,7 +30,7 @@
         public static function signIn($data)
         {
             global $connect ;
-            $qry = "SELECT * FROM users where email like :email and psw like :pwd role = admin";
+            $qry = "SELECT * FROM users where email like :email and psw like :pwd ";
             $stmt = $connect->prepare($qry) ;
             $stmt->execute([":email"=>$data['email'],":pwd"=>$data['password']]);
             $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -43,21 +39,7 @@
                 header("location:templates/doctor/doctor_dashboard.php") ;
             }else 
             {
-                $qry = "SELECT * FROM users where email like :email and psw like :pwd ";
-                $stmt = $connect->prepare($qry) ;
-                $stmt->execute([":email"=>$data['email'],":pwd"=>$data['password']]);
-                $stmt->fetchAll(PDO::FETCH_ASSOC);
-                if($stmt->rowCount() != 0)
-                {
-                    header("location:templates/doctor/doctor_dashboard.php") ;
-                }else 
-                {
-                    $qry = "SELECT * FROM users where email like :email and psw like :pwd ";
-                    $stmt = $connect->prepare($qry) ;
-                    $stmt->execute([":email"=>$data['email'],":pwd"=>$data['password']]);
-                    $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    
-                }
+                echo "error" ;
             }
         }
        
