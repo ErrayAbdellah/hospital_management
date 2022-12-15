@@ -6,15 +6,12 @@
     if (isset($_POST['signIn'])) {
         $email = $_POST["email"];
         $password = $_POST["pwd"];
-<<<<<<< HEAD
         if(strlen($email) != 0 && strlen($password) != 0) {
             loginPatient();
         }
-=======
         $data = ["email" =>$email,"password"=>$password];
 
         DoctorCrud::signIn($data);
->>>>>>> 701d890fcdf727e9946effaeb85e97ad0204c50b
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
         }
