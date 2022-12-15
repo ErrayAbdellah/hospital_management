@@ -1,5 +1,9 @@
-<?php require "../header.php" ; ?>
-<?php require "admin_sidebar.php" ; ?>
+<?php require "../header.php" ;
+    require '../../_classes/DbConnection.php';
+    require '../../_classes/AdminCrud.php';
+    require '../../services/AdminServices.php';
+    require "admin_sidebar.php" ;
+?>
 
 <div class="container col-8 pt-3">
     <div class="d-flex justify-content-between">
@@ -18,7 +22,7 @@
     <h2 class="fw-semibold my-4">Status</h2>
     <div class="d-flex gap-3">
         <div class="d-flex gap-2 col rounded p-2 justify-content-between" style="border: 1px solid #34AEAD;">
-            <span> <b style="color: #34AEAD;">1</b><br><small class="text-muted">Doctors</small></span>
+            <span> <b style="color: #34AEAD;"><?= $admin->counter("doctors") ?></b><br><small class="text-muted">Doctors</small></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px; background: #D9D9D9;">
                 <img src="../../img/icons/doctors.svg" alt="doctor">
             </div>
