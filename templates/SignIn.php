@@ -8,9 +8,9 @@
         if(strlen($email) != 0 && strlen($password) != 0) {
             loginPatient();
         }
-        $data = ["email" =>$email,"password"=>$password];
         
-        USER::signIn($data);
+        $data = ["email" =>$email,"password"=>$password];
+        DoctorCrud::signIn($data);
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
         }

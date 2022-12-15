@@ -1,15 +1,23 @@
-<?php require "../header.php" ;
-    require '../../_classes/DbConnection.php';
-    require '../../_classes/AdminCrud.php';
-    require '../../services/AdminServices.php';
+<?php 
+    //  require '../../_classes/DbConnection.php';
+     require '../../_classes/AdminCrud.php';
+     require '../../services/AdminServices.php';
+     require "admin_sidebar.php" ;
+    require "../header.php" ;
     require "admin_sidebar.php" ;
+
+if(isset($_GET["action"]) && $_GET['action'] === 'signOut'){
+    session_destroy() ;
+    header("location: http://localhost/hospital_management/") ;
+}
+   
 ?>
 
 <div class="container col-8 pt-3">
     <div class="d-flex justify-content-between">
         <div class="w-50 d-flex gap-2 ">
             <input type="search" placeholder="Search doctor name or email" class="form-control position-relative">
-            <button type="submit" class="btn text-white" style="background: #34AEAD;">Search</button>
+            <button type="submit" class="btn text-white" style="background: #34AEAD;" > <a href="<?=$_SERVER["PHP_SELF"]?>?&action=signOut"></a> Search</button>
         </div>
         <div class="d-flex gap-2">
             <span><small class="text-muted">Today's Date</small><br><b style="color: #34AEAD;"><?php echo date('Y-m-d'); ?>
