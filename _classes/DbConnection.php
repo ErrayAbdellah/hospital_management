@@ -5,7 +5,7 @@ session_start();
 
         public $host = "localhost" ;
         public $user = "root" ;
-        public $dbName = "hospitalmanagement" ;
+        public $dbName = "hospitalmanagement1" ;
         public $pwd = "rainoverme" ;
 
         public function connection() {

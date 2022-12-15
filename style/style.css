@@ -77,6 +77,15 @@ div#WelcomePage{
     color: red;
     visibility: hidden;
 }
+
+/* #signUpForm{
+    visibility: hidden;
+    visibility: ;
+} */
+
+/* #signInForm{
+    display: contents;
+} */
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;

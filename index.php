@@ -3,14 +3,14 @@
        require "./includes/autoloader.php" ;
        require "./includes/functions.php";
        require "./services/patientServices.php";
-// =================
-$signInStatus = null ;
-$signUpStatus = null ;
 
-require "./templates/SignIn.php" ;
-?>    
-require "./templates/SignUp.php" ;
-
+       $signInStatus = null ;
+       $signUpStatus = null ;
+       if(isset($_POST["signUp"])){
+              $signUpStatus = createUser() ;
+       }
+       require "./templates/SignIn.php" ;
+       require "./templates/SignUp.php" ;
 ?>    
 
 <script src="./app.js"></script>

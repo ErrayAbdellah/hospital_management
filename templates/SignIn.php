@@ -1,5 +1,4 @@
 <?php
-
     $emailStatus = null;
     $pwdStatus = null;
 
@@ -41,7 +40,7 @@
         <small class="form-text text-muted"></small>
     </div>
     <button type="submit" name="signIn" class="btn sign text-white fw-bold w-50 p-2 my-3 d-block mx-auto" style="background: #34AEAD">Sign In</button>
-    <span class="text-muted p-2 ">Don't have an account ? <b id="displaySignUp" class="text-primary"> Sign Up </b>  </span>
+    <span class="text-muted p-2 ">Don't have an account ? <a href="http://localhost/hospital_management/templates/SignUp.php" id="displaySignUp" class="text-primary"> Sign Up </a>  </span>
     </form>
 </div>
 <?php require "footer.php" ; ?>
