@@ -3,7 +3,7 @@
     <div>
         <div class="d-flex justify-content-center align-items-center gap-4">
             <img src="../../img/user.png" width="75" class="rounded-circle text-center">
-            <p class="mb-0"><b>Administrator</b><br><span class="text-muted">admin@youcode.ma</span></p>
+            <p class="mb-0"><b></b><br><span class="text-muted">admin@youcode.ma</span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
             <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;">Log out</button>
