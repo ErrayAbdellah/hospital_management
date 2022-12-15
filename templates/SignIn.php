@@ -10,7 +10,7 @@
             loginPatient();
         }
         $data = ["email" =>$email,"password"=>$password];
-        if()
+        
         USER::signIn($data);
         if (strlen($email) == 0) {
             $emailStatus = "please fill the email input" ;
