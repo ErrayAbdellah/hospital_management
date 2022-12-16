@@ -1,6 +1,11 @@
 <?php 
-require 'patient_sidebar.php';
-require '../header.php';
+    require "../../_classes/DbConnection.php" ;
+    require 'patient_sidebar.php';
+    require '../header.php';
+    require "../../services/doctorServices.php" ;
+
+$doctors = selectAllOfDoctors() ;
+var_dump($doctors) ;
 ?>
 
 

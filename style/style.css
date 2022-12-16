@@ -31,9 +31,9 @@ div#WelcomePage{
     border-color: rgb(0, 193, 193);
 }
 
-#signUpForm{
+/* #signUpForm{
     visibility: hidden;
-}
+} */
 
 #signInForm, #signUpForm{
     background: rgba( 255, 255, 255, 0.1 );
