@@ -1,7 +1,7 @@
 <?php 
 // session_start();
 
-    class DbConnection{
+    class DbConnection {
 
         public $host = "localhost" ;
         public $user = "root" ;
@@ -20,3 +20,6 @@
         }
 
     }   
+
+    // $connection = new DbConnection();
+    // $connect = $connection->connection();

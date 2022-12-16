@@ -1,13 +1,11 @@
-<?php 
-    require "../../_classes/DbConnection.php" ;
-    require 'patient_sidebar.php';
-    require '../header.php';
-    require "../../services/doctorServices.php" ;
+<?php
+require "../../_classes/DbConnection.php";
+require 'patient_sidebar.php';
+require '../header.php';
+require "../../services/doctorServices.php";
 
-$doctors = selectAllOfDoctors() ;
-var_dump($doctors) ;
+$doctors = selectAllOfDoctors();
 ?>
-
 
 <section class="container col-9 ">
     <div class="d-flex justify-content-between p-3  ">
@@ -24,7 +22,7 @@ var_dump($doctors) ;
             </form>
         </div>
         <div class="d-flex gap-2">
-            <span><small class="text-muted">Today's Date</small><br><?= $date->format("y/m/d") ;?></b></span>
+            <span><small class="text-muted">Today's Date</small><br><?= $date->format("y/m/d"); ?></b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-calendar" style="font-size:30px; "></i>
             </div>
@@ -42,49 +40,24 @@ var_dump($doctors) ;
                 </tr>
             </thead>
             <tbody class="text-center">
-                <tr>
-                    <th scope="row">Test Doctor</th>
-                    <td>doctor@youcode.ma</td>
-                    <td>Accident and emergen</td>
-
-                    <td>
-                        <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-                            <i class="fa fa-eye"></i> View
-
-
-                        </button>
-                        <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-                            <i class="fa fa-heartbeat"></i> session
-
-
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Test Doctor</th>
-                    <td>doctor@youcode.ma</td>
-                    <td>Accident and emergen</td>
-
-                    <td>
-                        <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-                            <i class="fa fa-eye"></i> View
-
-
-                        </button>
-                        <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-                            <i class="fa fa-heartbeat"></i> session
-
-
-                        </button>
-                    </td>
-                </tr>
+                <?php foreach ($doctors as $doctor) : ?>
+                    <tr>
+                        <th scope="row"><?= $doctor["fullName"] ?></th>
+                        <td><?= $doctor["email"] ?></td>
+                        <td><?= $doctor["speciality"] ?></td>
+                        <td>
+                            <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
+                                <i class="fa fa-eye"></i> View
+                            </button>
+                            <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
+                                <i class="fa fa-heartbeat"></i> session
+                            </button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </section>
-
-
-
-
 
 <?php require '../footer.php' ?>

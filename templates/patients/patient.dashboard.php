@@ -1,7 +1,6 @@
 <?php
     require 'patient_sidebar.php';
     require '../header.php';
-
 ?>
 <section class="container col-9 ">
     <div class="d-flex justify-content-between py-3 ">
@@ -47,25 +46,25 @@
         
   <div class=" row row-cols-2 d-flex justify-content-around">
     <div class="col card mb-3" style="width: 45%;">  <div class="d-flex justify-content-between p-3" >
-            <span><small class="text-muted">1</small><br><b style="color: #34AEAD; font-size:small;">All Doctors</b></span>
+            <span><small class="text-muted"><?= AdminCrud::counter("doctors") ?></small><br><b style="color: #34AEAD; font-size:small;">All Doctors</b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-medkit" style="font-size:30px; "></i>
             </div>
         </div></div>
     <div class="col card mb-3" style="width: 45%;">  <div class="d-flex justify-content-between p-3 ">
-            <span><small class="text-muted">3</small><br><b style="color: #34AEAD;font-size:small;">All Patients</b></span>
+            <span><small class="text-muted"><?= AdminCrud::counter("patients") ?></small><br><b style="color: #34AEAD;font-size:small;">All Patients</b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-wheelchair" style="font-size:30px; "></i>
             </div>
         </div></div>
     <div class="col card" style="width: 45%;">  <div class="d-flex  justify-content-between p-3">
-            <span><small class="text-muted">5</small><br><b style="color: #34AEAD; font-size:small;">NewBooking</b></span>
+            <span><small class="text-muted"><?= AdminCrud::counter("appointement") ?></small><br><b style="color: #34AEAD; font-size:small;">NewBooking</b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-book" style="font-size:30px; "></i>
             </div>
         </div></div>
     <div class="col card" style="width: 45%;">  <div class="d-flex justify-content-between p-3">
-            <span><small class="text-muted">2</small><br><b style="color: #34AEAD; font-size:small;">Today Sessions</b></span>
+            <span><small class="text-muted"><?= AdminCrud::counter("session") ?></small><br><b style="color: #34AEAD; font-size:small;">Today Sessions</b></span>
             <div class="border rounded d-flex justify-content-center align-items-center" style="width: 42px; height: 42px;">
                 <i class="fa fa-heartbeat" style="font-size:30px; "></i>
             </div>

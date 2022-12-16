@@ -1,8 +1,5 @@
 <?php
 
-    require "DbConnection.php" ;
-    $connection = new DbConnection();
-    $connect = $connection->connection();
 
     class AdminCrud {
 
@@ -12,7 +9,7 @@
             $stmt->execute([":name" => $data["name"], ":email" => $data["email"], ":pwd" => $data["pwd"], ":specialties" => $data["specialties"]]) ;
         }
 
-        public function displayDoctor(){
+        public static function displayDoctor(){
             global $connect;
             $query = "select * from doctor";
             $stmt = $connect->prepare($query);
@@ -33,29 +30,29 @@
             }
         }
 
-        public function counter($property){
+        public static function counter($property){
             global $connect;
             switch($property){
                 case "doctors":
-                    $query = "select count(*) from doctor";
+                    $query = "SELECT COUNT(*) FROM doctor";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "patients":
-                    $query = "select count(*) from patients";
+                    $query = "SELECT COUNT(*) FROM patients";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "appointement":
-                    $query = "select count(*) from appointement";
+                    $query = "SELECT COUNT(*) FROM appointement";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "session":
-                    $query = "select count(*) from session";
+                    $query = "SELECT COUNT(*) FROM session";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
@@ -63,7 +60,7 @@
             }
         }
 
-        public function editDoctor($id){
+        public static function editDoctor($id){
             global $connect;
 
             $query = "select * from doctor where id_doctor = $id";
@@ -73,7 +70,7 @@
             return $result[0];
         }
 
-        public function updateDoctor(){
+        public static function updateDoctor(){
             global $connect;
 
             $id = $_POST['doctorId'];
@@ -97,7 +94,7 @@
             return $result[0];
         }
 
-        public function deleteDoctor(){
+        public static function deleteDoctor(){
             global $connect;
             $id = $_POST["docId"];
             $query = "delete from doctor where id_doctor = $id";

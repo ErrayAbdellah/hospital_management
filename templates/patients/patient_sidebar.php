@@ -1,11 +1,21 @@
 <?php
+    require "../../includes/autoloader.php";
+    $connection = new DbConnection();
+    $connect = $connection->connection();
+    require("../../_classes/AdminCrud.php") ;
+
     session_start() ;
+    if(!isset($_SESSION["email"])){
+        header("location: http://localhost/hospital_management/") ;
+    }
     if(isset($_GET["action"]) && $_GET["action"] == "signOut"){
         session_destroy() ;
         header("location: http://localhost/hospital_management/") ;
     }
     $date =  new DateTime("", new DateTimeZone("Africa/Casablanca")) ;
-
+    // echo "<pre>" ;
+    //     var_dump($_SESSION) ;
+    // echo "</pre>" ; 
 ?>
 <div class="row">
 <section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end col-3">
