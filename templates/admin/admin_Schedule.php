@@ -5,15 +5,6 @@
     
     $doctors = selectAllOfDoctors();
     $sessions = selectAllSession() ;
-    // echo "<pre>" ;
-    //   var_dump($sessions) ;
-    // echo "<pre>" ;
-
-    // foreach($sessions as $session){
-    //   echo $session["title"] ;
-    //   echo "<hr>" ;
-    // }
-    // die() ;
   if(isset($_POST["addSession"])){
       AdminCrud::addSession($_POST) ;
   }
