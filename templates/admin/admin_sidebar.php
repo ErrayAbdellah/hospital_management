@@ -1,7 +1,8 @@
 <?php
+require "../../includes/autoloader.php";
 $connection = new DbConnection();
 $connect = $connection->connection();
-require "../../includes/autoloader.php";
+
 
 
 session_start();

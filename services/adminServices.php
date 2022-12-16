@@ -15,7 +15,7 @@ function createDoctor()
     if ($stmt->rowCount() != 0) {
         return "Doctor already exist";
     } else {
-        $admin->addDoctor($data, $connect);
+        AdminCrud::addDoctor($data, $connect);
         return "Doctor created successfully";
     }
 }

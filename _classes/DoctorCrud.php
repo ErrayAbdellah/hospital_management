@@ -16,9 +16,6 @@
             if($stmt->rowCount() != 0)
             {
                 header("location:templates/doctor/doctor_dashboard.php") ;
-            }else 
-            {
-                // echo "error" ;
             }
         }
     }
