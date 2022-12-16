@@ -6,8 +6,8 @@
         <li><a href="" class="navbar-brand text-white">| Rendez vous en ligne</a></li>
       </ul>
       <ul class="d-flex list-unstyled">
-        <li><a href="" class="navbar-brand text-secondary">Sign In</a></li>
-        <li> <a href="" class="navbar-brand text-secondary">Sign Up</a></li>
+        <li><a href="" class="navbar-brand text-dark fw-bold"> <i> Sign In </i> </a></li>
+        <li> <a href="" class="navbar-brand text-dark fw-bold"> <i> Sign Up </i> </a></li>
       </ul>
     </div>
   </nav>

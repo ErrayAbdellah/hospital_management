@@ -1,18 +1,15 @@
 <?php 
     //  require '../../_classes/DbConnection.php';
-     require '../../_classes/AdminCrud.php';
-     require '../../services/AdminServices.php';
-     require "admin_sidebar.php" ;
+    require '../../_classes/AdminCrud.php';
+    require '../../services/AdminServices.php';
     require "../header.php" ;
     require "admin_sidebar.php" ;
 
 if(isset($_GET["action"]) && $_GET['action'] === 'signOut'){
     session_destroy() ;
     header("location: http://localhost/hospital_management/") ;
-}
-   
+} 
 ?>
-
 <div class="container col-8 pt-3">
     <div class="d-flex justify-content-between">
         <div class="w-50 d-flex gap-2 ">

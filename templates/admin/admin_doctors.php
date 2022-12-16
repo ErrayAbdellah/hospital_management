@@ -2,10 +2,12 @@
 <?php 
       require '../header.php';
       require 'admin_sidebar.php';
+      require "../../includes/autoloader.php" ;
       require '../../_classes/DbConnection.php';
       require '../../_classes/AdminCrud.php';
       require '../../services/AdminServices.php';
-      
+
+      $admin = new AdminCrud;
       if(isset($_POST['addDoctor'])) createDoctor();
       if(isset($_POST['updateDoctor'])) $admin->updateDoctor();
       if(isset($_POST['deleteDoc'])) $admin->deleteDoctor();

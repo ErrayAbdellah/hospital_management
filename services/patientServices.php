@@ -1,5 +1,4 @@
 <?php
-
     $connection = new DbConnection() ;
     $connect = $connection->connection() ;
     // session_start() ;
@@ -34,4 +33,13 @@
         }else{
             return "email or password is incorrect" ;
         }
+    }
+
+    function selectAllPatients(){
+        global $connect ;
+        $query = "SELECT * FROM patients" ;
+        $stmt = $connect->prepare($query) ;
+        $stmt->execute() ;
+        $result = $stmt->fetchAll() ;
+        return $result ;
     }

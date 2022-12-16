@@ -1,7 +1,6 @@
-<?php require 'patient_sidebar.php';
+<?php 
+      require 'patient_sidebar.php';
       require '../header.php';
-
-
 ?>
 
 <section class="container col-9 ">

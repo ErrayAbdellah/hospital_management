@@ -30,6 +30,11 @@ div#WelcomePage{
 #crd_dctr_dashbrd{
     border-color: rgb(0, 193, 193);
 }
+
+#signUpForm{
+    visibility: hidden;
+}
+
 #signInForm, #signUpForm{
     background: rgba( 255, 255, 255, 0.1 );
     border: 2px solid rgba(21, 26, 64, 0.368);
@@ -78,10 +83,7 @@ div#WelcomePage{
     visibility: hidden;
 }
 
-/* #signUpForm{
-    visibility: hidden;
-    visibility: ;
-} */
+
 
 /* #signInForm{
     display: contents;
