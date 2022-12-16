@@ -1,7 +1,9 @@
-<?php require 'admin_sidebar.php';
+<?php 
+require 'admin_sidebar.php';
 require "../header.php";
-require "../../includes/autoloader.php";
+// require "../../includes/autoloader.php";
 require "../../services/patientServices.php";
+require "../../_classes/AdminCrud.php" ;
 
 $patients = selectAllPatients();
 
@@ -31,7 +33,7 @@ $patients = selectAllPatients();
     </div>
   </div>
 
-  <h4 class="">All Patients (3)</h4>
+  <h4 class="">All Patients (<?= AdminCrud::counter("patients") ?>)</h4>
 
 
   <div class="p-3">
