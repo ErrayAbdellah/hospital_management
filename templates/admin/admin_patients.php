@@ -6,9 +6,7 @@ require "../../services/patientServices.php";
 require "../../_classes/AdminCrud.php" ;
 
 $patients = selectAllPatients();
-
 ?>
-
 
 <section class="container col-9 ">
   <div class="d-flex justify-content-between p-3  ">
