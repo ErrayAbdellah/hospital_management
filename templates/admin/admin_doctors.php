@@ -61,7 +61,6 @@
 </table>
 </div>
 </section>
-
 <!-- ------------ Add / Edit Modal ------------ -->
 <form action="admin_doctors.php" method="POST" >
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

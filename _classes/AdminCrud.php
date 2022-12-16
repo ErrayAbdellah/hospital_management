@@ -100,12 +100,28 @@
             $stmt->execute();
         }
 
-        public function addSession(){
+        public static function addSession($data){
+            global $connect ;
+            $query = "INSERT INTO session(title, date_session, max_booking, id_doctor) VALUES(:title, :date_session, :max_booking,(SELECT id_doctor FROM doctor WHERE fullName = :fullName))" ;
+            $stmt = $connect->prepare($query) ;
+            $stmt->execute([
+                "title" => "test", 
+                "date_session" => $data["date"],
+                "max_booking" => 10,
+                "fullName" => $data["doctor"] 
+                ]) ;
             
         }
 
-        public function deleteSession(){
+        public static function deleteSession(){
 
+        }
+        public static function selectAllSession(){
+            global $connect ;
+            $query = "SELECT * FROM session" ;
+            $stmt = $connect->query($query) ;
+            $result = $stmt->rowCount() ;
+            return $result ;
         }
         
         public function displayPatientData(){

@@ -27,3 +27,5 @@ function signInAdmin()
         header("location: http://localhost/hospital_management/templates/admin/admin_dashboard.php");
     }
 }
+
+
