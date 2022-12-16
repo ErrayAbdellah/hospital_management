@@ -1,5 +1,4 @@
 <?php
-
     $connection = new DbConnection() ;
     $connect = $connection->connection() ;
 
@@ -9,8 +8,5 @@
         $stmt = $connect->prepare($query) ;
         $stmt->execute() ;
         $result = $stmt->fetchAll() ;
-        throwData($result) ;
+        return $result ;
     }
-    echo "here" ;
-    selectAllOfDoctors() ;
-    echo "heloi^por" ;

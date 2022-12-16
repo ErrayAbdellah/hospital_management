@@ -26,15 +26,14 @@
         $stmt = $connect->prepare($query) ;
         $stmt->execute(["email" => $email, "pwd" => $pwd]) ;
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC) ;
-        $_SESSION["email"] = $result[0]["email"] ;
-        $_SESSION["patient"] = $result[0]["fullName"] ;
         if($stmt->rowCount() != 0){
+            $_SESSION["email"] = $result[0]["email"] ;
+            $_SESSION["patient"] = $result[0]["fullName"] ;
             header("location: ./templates/patients/patient.dashboard.php");
         }else{
             return "email or password is incorrect" ;
         }
     }
-
     function selectAllPatients(){
         global $connect ;
         $query = "SELECT * FROM patients" ;
