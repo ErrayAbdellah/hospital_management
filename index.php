@@ -2,8 +2,10 @@
 require "./templates/header.php";
 require "./includes/autoloader.php";
 require "./includes/functions.php";
-require "./services/patientServices.php";
 require "./services/adminServices.php";
+require "./services/doctorServices.php";
+require "./services/patientServices.php";
+
 
 $signInStatus = null;
 $signUpStatus = null;
@@ -27,8 +29,15 @@ if (isset($_POST["signIn"])) {
        }
 }
 
-require "./templates/welcome.php" ;
+require "./templates/welcome.php";
+
 ?>
+<main class="d-flex">
+       <?php
+       require "./templates/SignIn.php";
+       // require "./templates/SignUp.php";
+       ?>
+</main>
 
 
 <?php if(isset($_GET["action"]) && $_GET["action"] == "signIn") {

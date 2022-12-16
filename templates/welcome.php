@@ -11,8 +11,8 @@
         <li><a href="" class="navbar-brand text-white">| Rendez vous en ligne</a></li>
       </ul>
       <ul class="d-flex list-unstyled">
-        <li><a href="<?= $realPath ?>?&action=signIn" class="navbar-brand text-secondary border border-2">Sign In</a></li>
-        <li> <a href="<?= $realPath ?>?action=signUp" class="navbar-brand text-secondary border border-2">Sign Up</a></li>
+        <li><a href="" class="navbar-brand text-dark fw-bold"> <i> Sign In </i> </a></li>
+        <li> <a href="" class="navbar-brand text-dark fw-bold"> <i> Sign Up </i> </a></li>
       </ul>
     </div>
   </nav>

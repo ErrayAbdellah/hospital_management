@@ -50,7 +50,7 @@
     </div>
     <div class="p-2 mt-3 mx-5 ">
         <button id="submitData" name="signUp" class="btn sign fw-bold text-white d-block w-50" style="background: #34AEAD">Sign Up</button>
-        <span class="text-muted p-2"> already Have an account <a href="http://localhost/hospital_management/" id="isSignedIn" class="muted">Sign In</a> </span>
+        <span class="text-muted p-2"> already Have an account <b>Sign In</b></span>
     </div>
     </form>
 </div>
