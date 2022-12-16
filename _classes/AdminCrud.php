@@ -1,4 +1,6 @@
 <?php
+
+    require "DbConnection.php" ;
     $connection = new DbConnection();
     $connect = $connection->connection();
 
@@ -115,4 +117,4 @@
 
         }
     }
-    $admin = new AdminCrud;
+    

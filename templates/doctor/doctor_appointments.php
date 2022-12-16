@@ -1,4 +1,5 @@
-<?php require 'doctor_sidebar.php';
+<?php
+      require 'doctor_sidebar.php';
       require '../header.php';
 
 ?>

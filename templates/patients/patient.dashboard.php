@@ -1,11 +1,8 @@
 <?php
- require 'patient_sidebar.php';
-require '../header.php';
+    require 'patient_sidebar.php';
+    require '../header.php';
 
-$date =  new DateTime("", new DateTimeZone("Africa/Casablanca")) ;
 ?>
-
-
 <section class="container col-9 ">
     <div class="d-flex justify-content-between py-3 ">
         <div class="d-flex  ">

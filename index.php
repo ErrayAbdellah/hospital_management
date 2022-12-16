@@ -1,9 +1,11 @@
 <?php
-require "./templates/header.php";
-require "./includes/autoloader.php";
-require "./includes/functions.php";
-require "./services/patientServices.php";
-require "./services/adminServices.php";
+require "./templates/header.php" ;
+require "./includes/autoloader.php" ;
+require "./includes/functions.php" ;
+require "./services/adminServices.php" ;
+require "./services/doctorServices.php" ;
+require "./services/patientServices.php" ;
+
 
 $signInStatus = null;
 $signUpStatus = null;
@@ -27,8 +29,11 @@ if (isset($_POST["signIn"])) {
               $pwdStatus = "please fill the password input";
        }
 }
+
 require "./templates/SignIn.php";
-// require "./templates/SignUp.php";
+require "./templates/SignUp.php";
+require "./templates/welcome.php";
+
 ?>
 
 <script src="./app.js"></script>

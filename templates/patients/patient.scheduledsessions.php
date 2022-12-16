@@ -1,5 +1,6 @@
-<?php require 'patient_sidebar.php';
-require '../header.php';
+<?php
+    require 'patient_sidebar.php';
+    require '../header.php';
 ?>
 
 
