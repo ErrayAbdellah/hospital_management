@@ -3,12 +3,11 @@
 
     class AdminCrud {
 
-        public function addDoctor($data, $connect){
+        public static function addDoctor($data, $connect){
             $query = "insert into doctor(fullName, email, pwd, speciality) values(:name, :email, :pwd, :specialties)";
             $stmt = $connect->prepare($query);
             $stmt->execute([":name" => $data["name"], ":email" => $data["email"], ":pwd" => $data["pwd"], ":specialties" => $data["specialties"]]) ;
         }
-
         public static function displayDoctor(){
             global $connect;
             $query = "select * from doctor";
@@ -29,7 +28,6 @@
                 </tr>';
             }
         }
-
         public static function counter($property){
             global $connect;
             switch($property){
@@ -111,7 +109,12 @@
         }
         
         public function displayPatientData(){
-
+            global $connect;
+            $query = "SELECT * FROM patients";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            return $result;
         }
     }
     

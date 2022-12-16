@@ -6,9 +6,7 @@ require "../../services/patientServices.php";
 require "../../_classes/AdminCrud.php" ;
 
 $patients = selectAllPatients();
-
 ?>
-
 
 <section class="container col-9 ">
   <div class="d-flex justify-content-between p-3  ">
@@ -63,50 +61,6 @@ $patients = selectAllPatients();
               </button>
           </tr>
         <?php endforeach; ?>
-
-        <!-- <tr>
-          <th scope="row">hanane </th>
-      <td>1244</td>
-      <td>0712458769</td>
-      <td>emhashenudara@gmail.</td>
-      <td>2021-12-10</td>
-
-
-      <td>
-<button type="button" class="btn btn"
-        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-        <i class="fa fa-eye"></i> View
-</button>
-</td>
-        <tr> -->
-        <!-- <th scope="row">Issam </th>
-        <td>1244</td>
-        <td>0712458769</td>
-        <td>emhashenudara@gmail.</td>
-        <td>2021-12-10</td>
-        <td>
-          <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-            <i class="fa fa-eye"></i> View
-          </button>
-        </td>
-        </tr> -->
-        <!-- <tr>
-          <th scope="row">Nadir</th>
-          <td>1244</td>
-          <td>0712458769</td>
-          <td>emhashenudara@gmail.</td>
-          <td>2021-12-10</td>
-
-
-          <td>
-            <button type="button" class="btn btn" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;background: #34AEAD; color:azure">
-              <i class="fa fa-eye"></i> View
-
-
-            </button>
-          </td>
-        </tr> -->
-
       </tbody>
     </table>
   </div>
