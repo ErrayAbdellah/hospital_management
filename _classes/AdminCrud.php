@@ -114,7 +114,11 @@
         }
 
         public static function deleteSession($id){
-            $query = "DELETE FROM session WHERE " ;
+            global $connect ;
+            $query = "DELETE FROM session WHERE id_session = :id" ;
+            $stmt = $connect->prepare($query) ;
+            $stmt->execute(["id" => $id]) ;
+            return "session has been deleted successfully" ;
         }
         public static function selectAllSession(){
             global $connect ;
