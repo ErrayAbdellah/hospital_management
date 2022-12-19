@@ -113,8 +113,8 @@
             
         }
 
-        public static function deleteSession(){
-
+        public static function deleteSession($id){
+            $query = "DELETE FROM session WHERE " ;
         }
         public static function selectAllSession(){
             global $connect ;
