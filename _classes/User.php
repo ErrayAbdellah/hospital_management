@@ -12,7 +12,6 @@
             $this->pwd = $pwd ; 
         }
         
-
         public function getFullName(){
             return $this->fullName ;
         }

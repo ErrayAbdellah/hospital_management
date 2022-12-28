@@ -1,16 +1,14 @@
 <?php
-    $connection = new DbConnection();
-    $connect = $connection->connection();
+
 
     class AdminCrud {
 
-        public function addDoctor($data, $connect){
+        public static function addDoctor($data, $connect){
             $query = "insert into doctor(fullName, email, pwd, speciality) values(:name, :email, :pwd, :specialties)";
             $stmt = $connect->prepare($query);
             $stmt->execute([":name" => $data["name"], ":email" => $data["email"], ":pwd" => $data["pwd"], ":specialties" => $data["specialties"]]) ;
         }
-
-        public function displayDoctor(){
+        public static function displayDoctor(){
             global $connect;
             $query = "select * from doctor";
             $stmt = $connect->prepare($query);
@@ -30,30 +28,29 @@
                 </tr>';
             }
         }
-
-        public function counter($property){
+        public static function counter($property){
             global $connect;
             switch($property){
                 case "doctors":
-                    $query = "select count(*) from doctor";
+                    $query = "SELECT COUNT(*) FROM doctor";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "patients":
-                    $query = "select count(*) from patients";
+                    $query = "SELECT COUNT(*) FROM patients";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "appointement":
-                    $query = "select count(*) from appointement";
+                    $query = "SELECT COUNT(*) FROM appointement";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
                 return $number_of_rows;
                 case "session":
-                    $query = "select count(*) from session";
+                    $query = "SELECT COUNT(*) FROM session";
                     $stmt = $connect->prepare($query);
                     $stmt->execute();
                     $number_of_rows = $stmt->fetchColumn();
@@ -61,7 +58,7 @@
             }
         }
 
-        public function editDoctor($id){
+        public static function editDoctor($id){
             global $connect;
 
             $query = "select * from doctor where id_doctor = $id";
@@ -71,7 +68,7 @@
             return $result[0];
         }
 
-        public function updateDoctor(){
+        public static function updateDoctor(){
             global $connect;
 
             $id = $_POST['doctorId'];
@@ -95,7 +92,7 @@
             return $result[0];
         }
 
-        public function deleteDoctor(){
+        public static function deleteDoctor(){
             global $connect;
             $id = $_POST["docId"];
             $query = "delete from doctor where id_doctor = $id";
@@ -103,16 +100,41 @@
             $stmt->execute();
         }
 
-        public function addSession(){
+        public static function addSession($data){
+            global $connect ;
+            $query = "INSERT INTO session(title, date_session, max_booking, id_doctor) VALUES(:title, :date_session, :max_booking,(SELECT id_doctor FROM doctor WHERE fullName = :fullName))" ;
+            $stmt = $connect->prepare($query) ;
+            $stmt->execute([
+                "title" => "test", 
+                "date_session" => $data["date"],
+                "max_booking" => 10,
+                "fullName" => $data["doctor"] 
+                ]) ;
             
         }
 
-        public function deleteSession(){
-
+        public static function deleteSession($id){
+            global $connect ;
+            $query = "DELETE FROM session WHERE id_session = :id" ;
+            $stmt = $connect->prepare($query) ;
+            $stmt->execute(["id" => $id]) ;
+            return "session has been deleted successfully" ;
+        }
+        public static function selectAllSession(){
+            global $connect ;
+            $query = "SELECT * FROM session" ;
+            $stmt = $connect->query($query) ;
+            $result = $stmt->rowCount() ;
+            return $result ;
         }
         
         public function displayPatientData(){
-
+            global $connect;
+            $query = "SELECT * FROM patients";
+            $stmt = $connect->prepare($query);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            return $result;
         }
     }
-    $admin = new AdminCrud;
+    

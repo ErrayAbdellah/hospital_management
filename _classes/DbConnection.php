@@ -1,12 +1,12 @@
 <?php 
-session_start();
+// session_start();
 
-    class DbConnection{
+    class DbConnection {
 
         public $host = "localhost" ;
         public $user = "root" ;
         public $dbName = "hospitalmanagement1" ;
-        public $pwd = "" ;
+        public $pwd = "rainoverme" ;
 
         public function connection() {
             try{
@@ -20,3 +20,6 @@ session_start();
         }
 
     }   
+
+    // $connection = new DbConnection();
+    // $connect = $connection->connection();

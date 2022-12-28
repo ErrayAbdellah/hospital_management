@@ -1,7 +1,6 @@
-<?php require 'patient_sidebar.php';
+<?php 
+      require 'patient_sidebar.php';
       require '../header.php';
-
-
 ?>
 
 <section class="container col-9 ">
@@ -48,7 +47,7 @@
         <i class="	fa fa-wheelchair" style="font-size:30px; "></i>
       </div>
       <div class=" ">
-    <h4 class="card-title " style="color: red;">Delete Account</h4>
+    <h4 class="card-title" style="color: red;">Delete Account</h4>
     <h6 class="card-title" >Will Permanently Remove your Account</h6>
     </div>
   </div>

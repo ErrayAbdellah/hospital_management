@@ -2,13 +2,14 @@
 <?php 
       require '../header.php';
       require 'admin_sidebar.php';
-      require '../../_classes/DbConnection.php';
-      require '../../_classes/AdminCrud.php';
+      // require "../../includes/autoloader.php" ;
+      // require '../../_classes/DbConnection.php';
+      // require '../../_classes/AdminCrud.php';
       require '../../services/AdminServices.php';
-      
+
       if(isset($_POST['addDoctor'])) createDoctor();
-      if(isset($_POST['updateDoctor'])) $admin->updateDoctor();
-      if(isset($_POST['deleteDoc'])) $admin->deleteDoctor();
+      if(isset($_POST['updateDoctor'])) AdminCrud::updateDoctor();
+      if(isset($_POST['deleteDoc'])) AdminCrud::deleteDoctor();
 ?>
 
 
@@ -42,7 +43,7 @@
 </button>
 </div>
 <div class="p-3">
-<h5 class="">All Doctor <?= $admin->counter("doctors") ?></h5>
+<h5 class="">All Doctor <?= AdminCrud::counter("doctors") ?></h5>
 <table class="table p-3 " style="border-color: #34AEAD ;">
   <thead>
     <tr class="text-center">
@@ -54,13 +55,12 @@
   </thead>
   <tbody class="text-center">
     <?php
-      $admin->displayDoctor();
+      AdminCrud::displayDoctor();
     ?>
   </tbody>
 </table>
 </div>
 </section>
-
 <!-- ------------ Add / Edit Modal ------------ -->
 <form action="admin_doctors.php" method="POST" >
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

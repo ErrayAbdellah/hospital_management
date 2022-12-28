@@ -2,8 +2,10 @@
 require "./templates/header.php";
 require "./includes/autoloader.php";
 require "./includes/functions.php";
-require "./services/patientServices.php";
 require "./services/adminServices.php";
+require "./services/doctorServices.php";
+require "./services/patientServices.php";
+
 
 $signInStatus = null;
 $signUpStatus = null;
@@ -18,7 +20,6 @@ if (isset($_POST["signIn"])) {
               loginPatient();
        }
        $data = ["email" => $email, "password" => $password];
-
        DoctorCrud::signIn($data);
        if (strlen($email) == 0) {
               $emailStatus = "please fill the email input";
@@ -27,9 +28,25 @@ if (isset($_POST["signIn"])) {
               $pwdStatus = "please fill the password input";
        }
 }
-require "./templates/SignIn.php";
-// require "./templates/SignUp.php";
+
+require "./templates/welcome.php";
+
 ?>
+<main class="d-flex">
+       <?php
+       require "./templates/SignIn.php";
+       // require "./templates/SignUp.php";
+       ?>
+</main>
+
+
+<?php if(isset($_GET["action"]) && $_GET["action"] == "signIn") {
+       require "./templates/SignIn.php" ;
+} ?>
+<?php if(isset($_GET["action"]) && $_GET["action"] == "signUp") {
+       require "./templates/SignUp.php" ;
+} ?>
+
 
 <script src="./app.js"></script>
 <?php require "./templates/footer.php"; ?>

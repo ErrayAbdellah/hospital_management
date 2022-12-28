@@ -1,4 +1,22 @@
-<?php session_start() ; ?>
+<?php
+    require "../../includes/autoloader.php";
+    $connection = new DbConnection();
+    $connect = $connection->connection();
+    require("../../_classes/AdminCrud.php") ;
+
+    session_start() ;
+    if(!isset($_SESSION["email"])){
+        header("location: http://localhost/hospital_management/") ;
+    }
+    if(isset($_GET["action"]) && $_GET["action"] == "signOut"){
+        session_destroy() ;
+        header("location: http://localhost/hospital_management/") ;
+    }
+    $date =  new DateTime("", new DateTimeZone("Africa/Casablanca")) ;
+    // echo "<pre>" ;
+    //     var_dump($_SESSION) ;
+    // echo "</pre>" ; 
+?>
 <div class="row">
 <section class="d-flex flex-column flex-shrink-0 p-3 vh-100 border-end col-3">
     <div>
@@ -7,7 +25,7 @@
             <p class="mb-0"><b><?= $_SESSION["patient"] ?></b><br><span class="text-muted"><?= $_SESSION["email"] ?></span></p>
         </div>
         <div class="w-100 d-flex justify-content-center my-4">
-            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;">Log out</button>
+            <button class="btn text-white w-75 d-flex justify-content-center" style="background: #34AEAD;"> <a href="<?= $_SERVER["PHP_SELF"]?>?&action=signOut">Log out</a></button>
         </div>
         <hr>
     </div>

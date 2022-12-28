@@ -1,5 +1,6 @@
  <?php require 'doctor_sidebar.php';
     //   require 'header.php' ;
+    require "../../services/doctorServices.php" ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
